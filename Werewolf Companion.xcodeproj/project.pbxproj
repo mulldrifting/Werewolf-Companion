@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE48E90E191C1FF500F892CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E90D191C1FF500F892CD /* Foundation.framework */; };
+		FE48E910191C1FF500F892CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E90F191C1FF500F892CD /* CoreGraphics.framework */; };
+		FE48E912191C1FF500F892CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E911191C1FF500F892CD /* UIKit.framework */; };
+		FE48E918191C1FF500F892CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE48E916191C1FF500F892CD /* InfoPlist.strings */; };
+		FE48E91A191C1FF600F892CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E919191C1FF600F892CD /* main.m */; };
+		FE48E91E191C1FF600F892CD /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E91D191C1FF600F892CD /* LLAppDelegate.m */; };
+		FE48E921191C1FF600F892CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE48E91F191C1FF600F892CD /* Main.storyboard */; };
+		FE48E924191C1FF600F892CD /* LLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E923191C1FF600F892CD /* LLViewController.m */; };
+		FE48E926191C1FF600F892CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE48E925191C1FF600F892CD /* Images.xcassets */; };
+		FE48E92D191C1FF600F892CD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E92C191C1FF600F892CD /* XCTest.framework */; };
+		FE48E92E191C1FF600F892CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E90D191C1FF500F892CD /* Foundation.framework */; };
+		FE48E92F191C1FF600F892CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E911191C1FF500F892CD /* UIKit.framework */; };
+		FE48E937191C1FF600F892CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE48E935191C1FF600F892CD /* InfoPlist.strings */; };
+		FE48E939191C1FF600F892CD /* Werewolf_CompanionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E938191C1FF600F892CD /* Werewolf_CompanionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE48E930191C1FF600F892CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE48E902191C1FF500F892CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE48E909191C1FF500F892CD;
+			remoteInfo = "Werewolf Companion";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE48E90A191C1FF500F892CD /* Werewolf Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Werewolf Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE48E90D191C1FF500F892CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE48E90F191C1FF500F892CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE48E911191C1FF500F892CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE48E915191C1FF500F892CD /* Werewolf Companion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Werewolf Companion-Info.plist"; sourceTree = "<group>"; };
+		FE48E917191C1FF500F892CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE48E919191C1FF600F892CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE48E91B191C1FF600F892CD /* Werewolf Companion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Werewolf Companion-Prefix.pch"; sourceTree = "<group>"; };
+		FE48E91C191C1FF600F892CD /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
+		FE48E91D191C1FF600F892CD /* LLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAppDelegate.m; sourceTree = "<group>"; };
+		FE48E920191C1FF600F892CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE48E922191C1FF600F892CD /* LLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
+		FE48E923191C1FF600F892CD /* LLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLViewController.m; sourceTree = "<group>"; };
+		FE48E925191C1FF600F892CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE48E92B191C1FF600F892CD /* Werewolf CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Werewolf CompanionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE48E92C191C1FF600F892CD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FE48E934191C1FF600F892CD /* Werewolf CompanionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Werewolf CompanionTests-Info.plist"; sourceTree = "<group>"; };
+		FE48E936191C1FF600F892CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE48E938191C1FF600F892CD /* Werewolf_CompanionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Werewolf_CompanionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE48E907191C1FF500F892CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE48E910191C1FF500F892CD /* CoreGraphics.framework in Frameworks */,
+				FE48E912191C1FF500F892CD /* UIKit.framework in Frameworks */,
+				FE48E90E191C1FF500F892CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE48E928191C1FF600F892CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE48E92D191C1FF600F892CD /* XCTest.framework in Frameworks */,
+				FE48E92F191C1FF600F892CD /* UIKit.framework in Frameworks */,
+				FE48E92E191C1FF600F892CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE48E901191C1FF500F892CD = {
+			isa = PBXGroup;
+			children = (
+				FE48E913191C1FF500F892CD /* Werewolf Companion */,
+				FE48E932191C1FF600F892CD /* Werewolf CompanionTests */,
+				FE48E90C191C1FF500F892CD /* Frameworks */,
+				FE48E90B191C1FF500F892CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE48E90B191C1FF500F892CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E90A191C1FF500F892CD /* Werewolf Companion.app */,
+				FE48E92B191C1FF600F892CD /* Werewolf CompanionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE48E90C191C1FF500F892CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E90D191C1FF500F892CD /* Foundation.framework */,
+				FE48E90F191C1FF500F892CD /* CoreGraphics.framework */,
+				FE48E911191C1FF500F892CD /* UIKit.framework */,
+				FE48E92C191C1FF600F892CD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE48E913191C1FF500F892CD /* Werewolf Companion */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E91C191C1FF600F892CD /* LLAppDelegate.h */,
+				FE48E91D191C1FF600F892CD /* LLAppDelegate.m */,
+				FE48E91F191C1FF600F892CD /* Main.storyboard */,
+				FE48E922191C1FF600F892CD /* LLViewController.h */,
+				FE48E923191C1FF600F892CD /* LLViewController.m */,
+				FE48E925191C1FF600F892CD /* Images.xcassets */,
+				FE48E914191C1FF500F892CD /* Supporting Files */,
+			);
+			path = "Werewolf Companion";
+			sourceTree = "<group>";
+		};
+		FE48E914191C1FF500F892CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E915191C1FF500F892CD /* Werewolf Companion-Info.plist */,
+				FE48E916191C1FF500F892CD /* InfoPlist.strings */,
+				FE48E919191C1FF600F892CD /* main.m */,
+				FE48E91B191C1FF600F892CD /* Werewolf Companion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE48E932191C1FF600F892CD /* Werewolf CompanionTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E938191C1FF600F892CD /* Werewolf_CompanionTests.m */,
+				FE48E933191C1FF600F892CD /* Supporting Files */,
+			);
+			path = "Werewolf CompanionTests";
+			sourceTree = "<group>";
+		};
+		FE48E933191C1FF600F892CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E934191C1FF600F892CD /* Werewolf CompanionTests-Info.plist */,
+				FE48E935191C1FF600F892CD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE48E909191C1FF500F892CD /* Werewolf Companion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE48E93C191C1FF600F892CD /* Build configuration list for PBXNativeTarget "Werewolf Companion" */;
+			buildPhases = (
+				FE48E906191C1FF500F892CD /* Sources */,
+				FE48E907191C1FF500F892CD /* Frameworks */,
+				FE48E908191C1FF500F892CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Werewolf Companion";
+			productName = "Werewolf Companion";
+			productReference = FE48E90A191C1FF500F892CD /* Werewolf Companion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE48E92A191C1FF600F892CD /* Werewolf CompanionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE48E93F191C1FF600F892CD /* Build configuration list for PBXNativeTarget "Werewolf CompanionTests" */;
+			buildPhases = (
+				FE48E927191C1FF600F892CD /* Sources */,
+				FE48E928191C1FF600F892CD /* Frameworks */,
+				FE48E929191C1FF600F892CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE48E931191C1FF600F892CD /* PBXTargetDependency */,
+			);
+			name = "Werewolf CompanionTests";
+			productName = "Werewolf CompanionTests";
+			productReference = FE48E92B191C1FF600F892CD /* Werewolf CompanionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE48E902191C1FF500F892CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Lauren Lee";
+				TargetAttributes = {
+					FE48E92A191C1FF600F892CD = {
+						TestTargetID = FE48E909191C1FF500F892CD;
+					};
+				};
+			};
+			buildConfigurationList = FE48E905191C1FF500F892CD /* Build configuration list for PBXProject "Werewolf Companion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE48E901191C1FF500F892CD;
+			productRefGroup = FE48E90B191C1FF500F892CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE48E909191C1FF500F892CD /* Werewolf Companion */,
+				FE48E92A191C1FF600F892CD /* Werewolf CompanionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE48E908191C1FF500F892CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE48E926191C1FF600F892CD /* Images.xcassets in Resources */,
+				FE48E918191C1FF500F892CD /* InfoPlist.strings in Resources */,
+				FE48E921191C1FF600F892CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE48E929191C1FF600F892CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE48E937191C1FF600F892CD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE48E906191C1FF500F892CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE48E91E191C1FF600F892CD /* LLAppDelegate.m in Sources */,
+				FE48E91A191C1FF600F892CD /* main.m in Sources */,
+				FE48E924191C1FF600F892CD /* LLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE48E927191C1FF600F892CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE48E939191C1FF600F892CD /* Werewolf_CompanionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE48E931191C1FF600F892CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE48E909191C1FF500F892CD /* Werewolf Companion */;
+			targetProxy = FE48E930191C1FF600F892CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE48E916191C1FF500F892CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE48E917191C1FF500F892CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE48E91F191C1FF600F892CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE48E920191C1FF600F892CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE48E935191C1FF600F892CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE48E936191C1FF600F892CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE48E93A191C1FF600F892CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE48E93B191C1FF600F892CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE48E93D191C1FF600F892CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Werewolf Companion/Werewolf Companion-Prefix.pch";
+				INFOPLIST_FILE = "Werewolf Companion/Werewolf Companion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE48E93E191C1FF600F892CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Werewolf Companion/Werewolf Companion-Prefix.pch";
+				INFOPLIST_FILE = "Werewolf Companion/Werewolf Companion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FE48E940191C1FF600F892CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Werewolf Companion.app/Werewolf Companion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Werewolf Companion/Werewolf Companion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Werewolf CompanionTests/Werewolf CompanionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FE48E941191C1FF600F892CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Werewolf Companion.app/Werewolf Companion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Werewolf Companion/Werewolf Companion-Prefix.pch";
+				INFOPLIST_FILE = "Werewolf CompanionTests/Werewolf CompanionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE48E905191C1FF500F892CD /* Build configuration list for PBXProject "Werewolf Companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE48E93A191C1FF600F892CD /* Debug */,
+				FE48E93B191C1FF600F892CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE48E93C191C1FF600F892CD /* Build configuration list for PBXNativeTarget "Werewolf Companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE48E93D191C1FF600F892CD /* Debug */,
+				FE48E93E191C1FF600F892CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE48E93F191C1FF600F892CD /* Build configuration list for PBXNativeTarget "Werewolf CompanionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE48E940191C1FF600F892CD /* Debug */,
+				FE48E941191C1FF600F892CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE48E902191C1FF500F892CD /* Project object */;
+}
