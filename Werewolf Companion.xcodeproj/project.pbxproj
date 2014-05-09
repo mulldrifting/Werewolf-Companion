@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FE77399B191C5F810017A270 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FE77399C191C5F810017A270 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				FE77399F191C5F9B0017A270 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		FE48E90E191C1FF500F892CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E90D191C1FF500F892CD /* Foundation.framework */; };
 		FE48E910191C1FF500F892CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E90F191C1FF500F892CD /* CoreGraphics.framework */; };
@@ -14,13 +28,29 @@
 		FE48E91A191C1FF600F892CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E919191C1FF600F892CD /* main.m */; };
 		FE48E91E191C1FF600F892CD /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E91D191C1FF600F892CD /* LLAppDelegate.m */; };
 		FE48E921191C1FF600F892CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE48E91F191C1FF600F892CD /* Main.storyboard */; };
-		FE48E924191C1FF600F892CD /* LLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E923191C1FF600F892CD /* LLViewController.m */; };
 		FE48E926191C1FF600F892CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE48E925191C1FF600F892CD /* Images.xcassets */; };
 		FE48E92D191C1FF600F892CD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E92C191C1FF600F892CD /* XCTest.framework */; };
 		FE48E92E191C1FF600F892CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E90D191C1FF500F892CD /* Foundation.framework */; };
 		FE48E92F191C1FF600F892CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE48E911191C1FF500F892CD /* UIKit.framework */; };
 		FE48E937191C1FF600F892CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE48E935191C1FF600F892CD /* InfoPlist.strings */; };
 		FE48E939191C1FF600F892CD /* Werewolf_CompanionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E938191C1FF600F892CD /* Werewolf_CompanionTests.m */; };
+		FE48E945191C212700F892CD /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E944191C212700F892CD /* iCarousel.m */; };
+		FE48E94A191C214A00F892CD /* TTCounterLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E947191C214A00F892CD /* TTCounterLabel.m */; };
+		FE48E94B191C214A00F892CD /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E949191C214A00F892CD /* TTTAttributedLabel.m */; };
+		FE48E950191C215C00F892CD /* CRBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E94D191C215C00F892CD /* CRBubble.m */; };
+		FE48E951191C215C00F892CD /* CRProductTour.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E94F191C215C00F892CD /* CRProductTour.m */; };
+		FE48E956191C21B000F892CD /* LLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E955191C21B000F892CD /* LLMainViewController.m */; };
+		FE48E959191C220A00F892CD /* LLTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E958191C220A00F892CD /* LLTitleViewController.m */; };
+		FE48E95C191C226700F892CD /* LLSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48E95B191C226700F892CD /* LLSettingsViewController.m */; };
+		FE4E94CA191C64D000FE2AA1 /* _GameSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94C3191C64D000FE2AA1 /* _GameSetup.m */; };
+		FE4E94CB191C64D000FE2AA1 /* _Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94C5191C64D000FE2AA1 /* _Player.m */; };
+		FE4E94CC191C64D000FE2AA1 /* GameSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94C7191C64D000FE2AA1 /* GameSetup.m */; };
+		FE4E94CD191C64D000FE2AA1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94C9191C64D000FE2AA1 /* Player.m */; };
+		FE4E94D1191C6A1C00FE2AA1 /* LLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94D0191C6A1C00FE2AA1 /* LLConstants.m */; };
+		FE77398C191C22AD0017A270 /* LLRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE77398B191C22AD0017A270 /* LLRulesViewController.m */; };
+		FE773992191C238A0017A270 /* LLLoadSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE773991191C238A0017A270 /* LLLoadSetupViewController.m */; };
+		FE773996191C2D840017A270 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE773994191C2D840017A270 /* Model.xcdatamodeld */; };
+		FE77399A191C5DFD0017A270 /* AppDelegate+CoreDataContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FE773999191C5DFD0017A270 /* AppDelegate+CoreDataContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +60,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = FE48E909191C1FF500F892CD;
 			remoteInfo = "Werewolf Companion";
+		};
+		FE4E94C0191C619F00FE2AA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE48E902191C1FF500F892CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE77399B191C5F810017A270;
+			remoteInfo = Mogenerator;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,14 +82,45 @@
 		FE48E91C191C1FF600F892CD /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
 		FE48E91D191C1FF600F892CD /* LLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAppDelegate.m; sourceTree = "<group>"; };
 		FE48E920191C1FF600F892CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE48E922191C1FF600F892CD /* LLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
-		FE48E923191C1FF600F892CD /* LLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLViewController.m; sourceTree = "<group>"; };
 		FE48E925191C1FF600F892CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE48E92B191C1FF600F892CD /* Werewolf CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Werewolf CompanionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE48E92C191C1FF600F892CD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FE48E934191C1FF600F892CD /* Werewolf CompanionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Werewolf CompanionTests-Info.plist"; sourceTree = "<group>"; };
 		FE48E936191C1FF600F892CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE48E938191C1FF600F892CD /* Werewolf_CompanionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Werewolf_CompanionTests.m; sourceTree = "<group>"; };
+		FE48E943191C212700F892CD /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		FE48E944191C212700F892CD /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		FE48E946191C214A00F892CD /* TTCounterLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCounterLabel.h; sourceTree = "<group>"; };
+		FE48E947191C214A00F892CD /* TTCounterLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCounterLabel.m; sourceTree = "<group>"; };
+		FE48E948191C214A00F892CD /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		FE48E949191C214A00F892CD /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		FE48E94C191C215C00F892CD /* CRBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBubble.h; sourceTree = "<group>"; };
+		FE48E94D191C215C00F892CD /* CRBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBubble.m; sourceTree = "<group>"; };
+		FE48E94E191C215C00F892CD /* CRProductTour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRProductTour.h; sourceTree = "<group>"; };
+		FE48E94F191C215C00F892CD /* CRProductTour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRProductTour.m; sourceTree = "<group>"; };
+		FE48E954191C21B000F892CD /* LLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMainViewController.h; sourceTree = "<group>"; };
+		FE48E955191C21B000F892CD /* LLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMainViewController.m; sourceTree = "<group>"; };
+		FE48E957191C220A00F892CD /* LLTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTitleViewController.h; sourceTree = "<group>"; };
+		FE48E958191C220A00F892CD /* LLTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTitleViewController.m; sourceTree = "<group>"; };
+		FE48E95A191C226700F892CD /* LLSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSettingsViewController.h; sourceTree = "<group>"; };
+		FE48E95B191C226700F892CD /* LLSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSettingsViewController.m; sourceTree = "<group>"; };
+		FE4E94C2191C64D000FE2AA1 /* _GameSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _GameSetup.h; path = Model/_GameSetup.h; sourceTree = "<group>"; };
+		FE4E94C3191C64D000FE2AA1 /* _GameSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _GameSetup.m; path = Model/_GameSetup.m; sourceTree = "<group>"; };
+		FE4E94C4191C64D000FE2AA1 /* _Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Player.h; path = Model/_Player.h; sourceTree = "<group>"; };
+		FE4E94C5191C64D000FE2AA1 /* _Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Player.m; path = Model/_Player.m; sourceTree = "<group>"; };
+		FE4E94C6191C64D000FE2AA1 /* GameSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameSetup.h; path = Model/GameSetup.h; sourceTree = "<group>"; };
+		FE4E94C7191C64D000FE2AA1 /* GameSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameSetup.m; path = Model/GameSetup.m; sourceTree = "<group>"; };
+		FE4E94C8191C64D000FE2AA1 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Model/Player.h; sourceTree = "<group>"; };
+		FE4E94C9191C64D000FE2AA1 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Model/Player.m; sourceTree = "<group>"; };
+		FE4E94CF191C6A1C00FE2AA1 /* LLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLConstants.h; sourceTree = "<group>"; };
+		FE4E94D0191C6A1C00FE2AA1 /* LLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLConstants.m; sourceTree = "<group>"; };
+		FE77398A191C22AD0017A270 /* LLRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRulesViewController.h; sourceTree = "<group>"; };
+		FE77398B191C22AD0017A270 /* LLRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRulesViewController.m; sourceTree = "<group>"; };
+		FE773990191C238A0017A270 /* LLLoadSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLLoadSetupViewController.h; sourceTree = "<group>"; };
+		FE773991191C238A0017A270 /* LLLoadSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLLoadSetupViewController.m; sourceTree = "<group>"; };
+		FE773995191C2D840017A270 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FE773998191C5DFD0017A270 /* AppDelegate+CoreDataContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+CoreDataContext.h"; sourceTree = "<group>"; };
+		FE773999191C5DFD0017A270 /* AppDelegate+CoreDataContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+CoreDataContext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				FE48E913191C1FF500F892CD /* Werewolf Companion */,
+				FE48E952191C216A00F892CD /* Resources */,
 				FE48E932191C1FF600F892CD /* Werewolf CompanionTests */,
 				FE48E90C191C1FF500F892CD /* Frameworks */,
 				FE48E90B191C1FF500F892CD /* Products */,
@@ -112,12 +181,17 @@
 		FE48E913191C1FF500F892CD /* Werewolf Companion */ = {
 			isa = PBXGroup;
 			children = (
+				FE48E91F191C1FF600F892CD /* Main.storyboard */,
+				FE773994191C2D840017A270 /* Model.xcdatamodeld */,
 				FE48E91C191C1FF600F892CD /* LLAppDelegate.h */,
 				FE48E91D191C1FF600F892CD /* LLAppDelegate.m */,
-				FE48E91F191C1FF600F892CD /* Main.storyboard */,
-				FE48E922191C1FF600F892CD /* LLViewController.h */,
-				FE48E923191C1FF600F892CD /* LLViewController.m */,
-				FE48E925191C1FF600F892CD /* Images.xcassets */,
+				FE773993191C2D770017A270 /* Model */,
+				FE48E953191C218100F892CD /* Main View Controllers */,
+				FE77398E191C23500017A270 /* Game Setup View Controllers */,
+				FE77398F191C23720017A270 /* Game View Controllers */,
+				FE4E94CE191C6A0000FE2AA1 /* Data */,
+				FE48E942191C20E700F892CD /* Third-Party Classes */,
+				FE773997191C5DE10017A270 /* Categories */,
 				FE48E914191C1FF500F892CD /* Supporting Files */,
 			);
 			path = "Werewolf Companion";
@@ -152,6 +226,96 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FE48E942191C20E700F892CD /* Third-Party Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E94C191C215C00F892CD /* CRBubble.h */,
+				FE48E94D191C215C00F892CD /* CRBubble.m */,
+				FE48E94E191C215C00F892CD /* CRProductTour.h */,
+				FE48E94F191C215C00F892CD /* CRProductTour.m */,
+				FE48E946191C214A00F892CD /* TTCounterLabel.h */,
+				FE48E947191C214A00F892CD /* TTCounterLabel.m */,
+				FE48E948191C214A00F892CD /* TTTAttributedLabel.h */,
+				FE48E949191C214A00F892CD /* TTTAttributedLabel.m */,
+				FE48E943191C212700F892CD /* iCarousel.h */,
+				FE48E944191C212700F892CD /* iCarousel.m */,
+			);
+			name = "Third-Party Classes";
+			sourceTree = "<group>";
+		};
+		FE48E952191C216A00F892CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E925191C1FF600F892CD /* Images.xcassets */,
+			);
+			name = Resources;
+			path = "Werewolf Companion";
+			sourceTree = "<group>";
+		};
+		FE48E953191C218100F892CD /* Main View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE48E954191C21B000F892CD /* LLMainViewController.h */,
+				FE48E955191C21B000F892CD /* LLMainViewController.m */,
+				FE48E95A191C226700F892CD /* LLSettingsViewController.h */,
+				FE48E95B191C226700F892CD /* LLSettingsViewController.m */,
+				FE48E957191C220A00F892CD /* LLTitleViewController.h */,
+				FE48E958191C220A00F892CD /* LLTitleViewController.m */,
+				FE77398A191C22AD0017A270 /* LLRulesViewController.h */,
+				FE77398B191C22AD0017A270 /* LLRulesViewController.m */,
+			);
+			name = "Main View Controllers";
+			sourceTree = "<group>";
+		};
+		FE4E94CE191C6A0000FE2AA1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E94CF191C6A1C00FE2AA1 /* LLConstants.h */,
+				FE4E94D0191C6A1C00FE2AA1 /* LLConstants.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		FE77398E191C23500017A270 /* Game Setup View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE773990191C238A0017A270 /* LLLoadSetupViewController.h */,
+				FE773991191C238A0017A270 /* LLLoadSetupViewController.m */,
+			);
+			name = "Game Setup View Controllers";
+			sourceTree = "<group>";
+		};
+		FE77398F191C23720017A270 /* Game View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Game View Controllers";
+			sourceTree = "<group>";
+		};
+		FE773993191C2D770017A270 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E94C2191C64D000FE2AA1 /* _GameSetup.h */,
+				FE4E94C3191C64D000FE2AA1 /* _GameSetup.m */,
+				FE4E94C4191C64D000FE2AA1 /* _Player.h */,
+				FE4E94C5191C64D000FE2AA1 /* _Player.m */,
+				FE4E94C6191C64D000FE2AA1 /* GameSetup.h */,
+				FE4E94C7191C64D000FE2AA1 /* GameSetup.m */,
+				FE4E94C8191C64D000FE2AA1 /* Player.h */,
+				FE4E94C9191C64D000FE2AA1 /* Player.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FE773997191C5DE10017A270 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FE773998191C5DFD0017A270 /* AppDelegate+CoreDataContext.h */,
+				FE773999191C5DFD0017A270 /* AppDelegate+CoreDataContext.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +330,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FE4E94C1191C619F00FE2AA1 /* PBXTargetDependency */,
 			);
 			name = "Werewolf Companion";
 			productName = "Werewolf Companion";
@@ -220,6 +385,7 @@
 			targets = (
 				FE48E909191C1FF500F892CD /* Werewolf Companion */,
 				FE48E92A191C1FF600F892CD /* Werewolf CompanionTests */,
+				FE77399B191C5F810017A270 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -245,14 +411,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FE77399F191C5F9B0017A270 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/mogenerator -m Werewolf\\ Companion/Model.xcdatamodeld/Model.xcdatamodel -O Werewolf\\ Companion/Model --template-var arc=true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE48E906191C1FF500F892CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4E94CB191C64D000FE2AA1 /* _Player.m in Sources */,
 				FE48E91E191C1FF600F892CD /* LLAppDelegate.m in Sources */,
+				FE48E94A191C214A00F892CD /* TTCounterLabel.m in Sources */,
+				FE48E951191C215C00F892CD /* CRProductTour.m in Sources */,
+				FE48E945191C212700F892CD /* iCarousel.m in Sources */,
 				FE48E91A191C1FF600F892CD /* main.m in Sources */,
-				FE48E924191C1FF600F892CD /* LLViewController.m in Sources */,
+				FE77399A191C5DFD0017A270 /* AppDelegate+CoreDataContext.m in Sources */,
+				FE48E95C191C226700F892CD /* LLSettingsViewController.m in Sources */,
+				FE48E950191C215C00F892CD /* CRBubble.m in Sources */,
+				FE77398C191C22AD0017A270 /* LLRulesViewController.m in Sources */,
+				FE4E94D1191C6A1C00FE2AA1 /* LLConstants.m in Sources */,
+				FE48E959191C220A00F892CD /* LLTitleViewController.m in Sources */,
+				FE48E94B191C214A00F892CD /* TTTAttributedLabel.m in Sources */,
+				FE773992191C238A0017A270 /* LLLoadSetupViewController.m in Sources */,
+				FE773996191C2D840017A270 /* Model.xcdatamodeld in Sources */,
+				FE48E956191C21B000F892CD /* LLMainViewController.m in Sources */,
+				FE4E94CA191C64D000FE2AA1 /* _GameSetup.m in Sources */,
+				FE4E94CD191C64D000FE2AA1 /* Player.m in Sources */,
+				FE4E94CC191C64D000FE2AA1 /* GameSetup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +469,11 @@
 			isa = PBXTargetDependency;
 			target = FE48E909191C1FF500F892CD /* Werewolf Companion */;
 			targetProxy = FE48E930191C1FF600F892CD /* PBXContainerItemProxy */;
+		};
+		FE4E94C1191C619F00FE2AA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE77399B191C5F810017A270 /* Mogenerator */;
+			targetProxy = FE4E94C0191C619F00FE2AA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -438,6 +641,20 @@
 			};
 			name = Release;
 		};
+		FE77399D191C5F810017A270 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE77399E191C5F810017A270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -457,6 +674,7 @@
 				FE48E93E191C1FF600F892CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE48E93F191C1FF600F892CD /* Build configuration list for PBXNativeTarget "Werewolf CompanionTests" */ = {
 			isa = XCConfigurationList;
@@ -465,8 +683,31 @@
 				FE48E941191C1FF600F892CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE77399C191C5F810017A270 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE77399D191C5F810017A270 /* Debug */,
+				FE77399E191C5F810017A270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE773994191C2D840017A270 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE773995191C2D840017A270 /* Model.xcdatamodel */,
+			);
+			currentVersion = FE773995191C2D840017A270 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE48E902191C1FF500F892CD /* Project object */;
 }
