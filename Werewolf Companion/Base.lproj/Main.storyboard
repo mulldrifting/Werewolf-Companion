@@ -224,15 +224,15 @@ Default timer
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NMR-9F-ERR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="NMR-9F-ERR">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SetupCell" id="nCN-US-3Mm">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nCN-US-3Mm" id="hZh-Zh-QTQ">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -274,7 +274,7 @@ Default timer
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RoleCell" rowHeight="50" id="RMy-nS-MTL" customClass="StepperTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RoleCell" rowHeight="50" id="RMy-nS-MTL" customClass="LLStepperTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RMy-nS-MTL" id="9k1-bh-K19">
@@ -334,22 +334,22 @@ Default timer
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Game Setup" id="idQ-Mv-iwo">
-                        <barButtonItem key="leftBarButtonItem" title="Save" id="6N5-Hb-n8v">
+                        <barButtonItem key="leftBarButtonItem" image="settings_icon" id="6N5-Hb-n8v">
+                            <inset key="imageInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                             <connections>
-                                <action selector="saveSetup:" destination="6JV-T7-Guj" id="GJc-BH-mGR"/>
+                                <action selector="openSettings:" destination="6JV-T7-Guj" id="KO5-sZ-Yo5"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Start" id="r6f-S0-k1U">
                             <connections>
-                                <action selector="startGame:" destination="6JV-T7-Guj" id="Ye8-gK-4Dk"/>
-                                <segue destination="DLi-M8-I1e" kind="push" identifier="showGameViewSegue" id="LuG-1S-mQ2"/>
+                                <action selector="startPressed:" destination="6JV-T7-Guj" id="hF4-I1-EfN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="startButton" destination="r6f-S0-k1U" id="lcA-aF-nAJ"/>
                         <outlet property="tableView" destination="tUg-BC-Flw" id="zB5-qh-PTy"/>
+                        <segue destination="DLi-M8-I1e" kind="push" identifier="showGameViewSegue" id="ZVH-yn-add"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sr3-np-HaK" userLabel="First Responder" sceneMemberID="firstResponder"/>

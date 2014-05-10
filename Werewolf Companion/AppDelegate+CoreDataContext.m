@@ -2,8 +2,8 @@
 //  AppDelegate+CoreDataContext.m
 //  Werewolf
 //
-//  Created by Lauren Lee on 5/7/14.
-//  Copyright (c) 2014 Lauren Lee. All rights reserved.
+//  Created by Brad
+//  
 //
 
 #import "AppDelegate+CoreDataContext.h"
@@ -15,7 +15,7 @@
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory
                                                          inDomains:NSUserDomainMask] lastObject];
     
-    url = [url URLByAppendingPathComponent:@"LabelDocument"];
+    url = [url URLByAppendingPathComponent:@"GameDataDocument"];
     
     self.managedDocument = [[UIManagedDocument alloc] initWithFileURL:url];
     

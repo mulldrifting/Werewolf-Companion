@@ -29,4 +29,7 @@ typedef NS_ENUM(NSInteger, roleType)
 + (NSArray *)listOfRoleDescriptions;
 + (NSDictionary *)defaultSettings;
 
+FOUNDATION_EXPORT NSString *const kDefaultTimerStartValue;
+FOUNDATION_EXPORT NSString *const kDefaultGameSetupsInitialized;
+
 @end

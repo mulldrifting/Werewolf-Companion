@@ -47,6 +47,24 @@
 		FE4E94CC191C64D000FE2AA1 /* GameSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94C7191C64D000FE2AA1 /* GameSetup.m */; };
 		FE4E94CD191C64D000FE2AA1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94C9191C64D000FE2AA1 /* Player.m */; };
 		FE4E94D1191C6A1C00FE2AA1 /* LLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94D0191C6A1C00FE2AA1 /* LLConstants.m */; };
+		FE4E94D4191D92D400FE2AA1 /* LLCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94D3191D92D400FE2AA1 /* LLCreateGameViewController.m */; };
+		FE4E94D7191D94E500FE2AA1 /* LLStepperTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94D6191D94E500FE2AA1 /* LLStepperTableViewCell.m */; };
+		FE4E94DA191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94D9191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.m */; };
+		FE4E94DD191DAF6100FE2AA1 /* LLGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94DC191DAF6100FE2AA1 /* LLGameViewController.m */; };
+		FE4E94E1191DB00A00FE2AA1 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94E0191DB00A00FE2AA1 /* Game.m */; };
+		FE4E94E7191DBA7600FE2AA1 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94E6191DBA7600FE2AA1 /* UIAlertView+Blocks.m */; };
+		FE4E94EE191DBE9000FE2AA1 /* LLAlphaView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94ED191DBE9000FE2AA1 /* LLAlphaView.m */; };
+		FE4E94F1191DBF9600FE2AA1 /* LLCarouselController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94F0191DBF9600FE2AA1 /* LLCarouselController.m */; };
+		FE4E94F7191DC1A200FE2AA1 /* LLTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94F6191DC1A200FE2AA1 /* LLTimerViewController.m */; };
+		FE4E950B191DC6BB00FE2AA1 /* Assassin.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94FA191DC6BB00FE2AA1 /* Assassin.m */; };
+		FE4E950C191DC6BB00FE2AA1 /* Hunter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94FC191DC6BB00FE2AA1 /* Hunter.m */; };
+		FE4E950D191DC6BB00FE2AA1 /* Minion.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94FE191DC6BB00FE2AA1 /* Minion.m */; };
+		FE4E950E191DC6BB00FE2AA1 /* Priest.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9500191DC6BB00FE2AA1 /* Priest.m */; };
+		FE4E950F191DC6BB00FE2AA1 /* Role.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9502191DC6BB00FE2AA1 /* Role.m */; };
+		FE4E9510191DC6BB00FE2AA1 /* Seer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9504191DC6BB00FE2AA1 /* Seer.m */; };
+		FE4E9511191DC6BB00FE2AA1 /* Vigilante.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9506191DC6BB00FE2AA1 /* Vigilante.m */; };
+		FE4E9512191DC6BB00FE2AA1 /* Villager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9508191DC6BB00FE2AA1 /* Villager.m */; };
+		FE4E9513191DC6BB00FE2AA1 /* Werewolf.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E950A191DC6BB00FE2AA1 /* Werewolf.m */; };
 		FE77398C191C22AD0017A270 /* LLRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE77398B191C22AD0017A270 /* LLRulesViewController.m */; };
 		FE773992191C238A0017A270 /* LLLoadSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE773991191C238A0017A270 /* LLLoadSetupViewController.m */; };
 		FE773996191C2D840017A270 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE773994191C2D840017A270 /* Model.xcdatamodeld */; };
@@ -114,6 +132,42 @@
 		FE4E94C9191C64D000FE2AA1 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Model/Player.m; sourceTree = "<group>"; };
 		FE4E94CF191C6A1C00FE2AA1 /* LLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLConstants.h; sourceTree = "<group>"; };
 		FE4E94D0191C6A1C00FE2AA1 /* LLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLConstants.m; sourceTree = "<group>"; };
+		FE4E94D2191D92D400FE2AA1 /* LLCreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCreateGameViewController.h; sourceTree = "<group>"; };
+		FE4E94D3191D92D400FE2AA1 /* LLCreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCreateGameViewController.m; sourceTree = "<group>"; };
+		FE4E94D5191D94E500FE2AA1 /* LLStepperTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLStepperTableViewCell.h; sourceTree = "<group>"; };
+		FE4E94D6191D94E500FE2AA1 /* LLStepperTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLStepperTableViewCell.m; sourceTree = "<group>"; };
+		FE4E94D8191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+DeepCopying.h"; sourceTree = "<group>"; };
+		FE4E94D9191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+DeepCopying.m"; sourceTree = "<group>"; };
+		FE4E94DB191DAF6100FE2AA1 /* LLGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLGameViewController.h; sourceTree = "<group>"; };
+		FE4E94DC191DAF6100FE2AA1 /* LLGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLGameViewController.m; sourceTree = "<group>"; };
+		FE4E94DF191DB00A00FE2AA1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		FE4E94E0191DB00A00FE2AA1 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		FE4E94E5191DBA7600FE2AA1 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		FE4E94E6191DBA7600FE2AA1 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		FE4E94EC191DBE9000FE2AA1 /* LLAlphaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAlphaView.h; sourceTree = "<group>"; };
+		FE4E94ED191DBE9000FE2AA1 /* LLAlphaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAlphaView.m; sourceTree = "<group>"; };
+		FE4E94EF191DBF9600FE2AA1 /* LLCarouselController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCarouselController.h; sourceTree = "<group>"; };
+		FE4E94F0191DBF9600FE2AA1 /* LLCarouselController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarouselController.m; sourceTree = "<group>"; };
+		FE4E94F5191DC1A200FE2AA1 /* LLTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTimerViewController.h; sourceTree = "<group>"; };
+		FE4E94F6191DC1A200FE2AA1 /* LLTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTimerViewController.m; sourceTree = "<group>"; };
+		FE4E94F9191DC6BB00FE2AA1 /* Assassin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assassin.h; sourceTree = "<group>"; };
+		FE4E94FA191DC6BB00FE2AA1 /* Assassin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assassin.m; sourceTree = "<group>"; };
+		FE4E94FB191DC6BB00FE2AA1 /* Hunter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
+		FE4E94FC191DC6BB00FE2AA1 /* Hunter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hunter.m; sourceTree = "<group>"; };
+		FE4E94FD191DC6BB00FE2AA1 /* Minion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Minion.h; sourceTree = "<group>"; };
+		FE4E94FE191DC6BB00FE2AA1 /* Minion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Minion.m; sourceTree = "<group>"; };
+		FE4E94FF191DC6BB00FE2AA1 /* Priest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Priest.h; sourceTree = "<group>"; };
+		FE4E9500191DC6BB00FE2AA1 /* Priest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Priest.m; sourceTree = "<group>"; };
+		FE4E9501191DC6BB00FE2AA1 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
+		FE4E9502191DC6BB00FE2AA1 /* Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Role.m; sourceTree = "<group>"; };
+		FE4E9503191DC6BB00FE2AA1 /* Seer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seer.h; sourceTree = "<group>"; };
+		FE4E9504191DC6BB00FE2AA1 /* Seer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seer.m; sourceTree = "<group>"; };
+		FE4E9505191DC6BB00FE2AA1 /* Vigilante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vigilante.h; sourceTree = "<group>"; };
+		FE4E9506191DC6BB00FE2AA1 /* Vigilante.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vigilante.m; sourceTree = "<group>"; };
+		FE4E9507191DC6BB00FE2AA1 /* Villager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Villager.h; sourceTree = "<group>"; };
+		FE4E9508191DC6BB00FE2AA1 /* Villager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Villager.m; sourceTree = "<group>"; };
+		FE4E9509191DC6BB00FE2AA1 /* Werewolf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Werewolf.h; sourceTree = "<group>"; };
+		FE4E950A191DC6BB00FE2AA1 /* Werewolf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Werewolf.m; sourceTree = "<group>"; };
 		FE77398A191C22AD0017A270 /* LLRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRulesViewController.h; sourceTree = "<group>"; };
 		FE77398B191C22AD0017A270 /* LLRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRulesViewController.m; sourceTree = "<group>"; };
 		FE773990191C238A0017A270 /* LLLoadSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLLoadSetupViewController.h; sourceTree = "<group>"; };
@@ -182,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				FE48E91F191C1FF600F892CD /* Main.storyboard */,
-				FE773994191C2D840017A270 /* Model.xcdatamodeld */,
 				FE48E91C191C1FF600F892CD /* LLAppDelegate.h */,
 				FE48E91D191C1FF600F892CD /* LLAppDelegate.m */,
 				FE773993191C2D770017A270 /* Model */,
@@ -276,25 +329,10 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		FE77398E191C23500017A270 /* Game Setup View Controllers */ = {
+		FE4E94DE191DAFE700FE2AA1 /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				FE773990191C238A0017A270 /* LLLoadSetupViewController.h */,
-				FE773991191C238A0017A270 /* LLLoadSetupViewController.m */,
-			);
-			name = "Game Setup View Controllers";
-			sourceTree = "<group>";
-		};
-		FE77398F191C23720017A270 /* Game View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Game View Controllers";
-			sourceTree = "<group>";
-		};
-		FE773993191C2D770017A270 /* Model */ = {
-			isa = PBXGroup;
-			children = (
+				FE773994191C2D840017A270 /* Model.xcdatamodeld */,
 				FE4E94C2191C64D000FE2AA1 /* _GameSetup.h */,
 				FE4E94C3191C64D000FE2AA1 /* _GameSetup.m */,
 				FE4E94C4191C64D000FE2AA1 /* _Player.h */,
@@ -304,14 +342,90 @@
 				FE4E94C8191C64D000FE2AA1 /* Player.h */,
 				FE4E94C9191C64D000FE2AA1 /* Player.m */,
 			);
+			name = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		FE4E94EB191DBE8000FE2AA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E94EC191DBE9000FE2AA1 /* LLAlphaView.h */,
+				FE4E94ED191DBE9000FE2AA1 /* LLAlphaView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FE4E94F8191DC69B00FE2AA1 /* Roles */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E9501191DC6BB00FE2AA1 /* Role.h */,
+				FE4E9502191DC6BB00FE2AA1 /* Role.m */,
+				FE4E94F9191DC6BB00FE2AA1 /* Assassin.h */,
+				FE4E94FA191DC6BB00FE2AA1 /* Assassin.m */,
+				FE4E94FB191DC6BB00FE2AA1 /* Hunter.h */,
+				FE4E94FC191DC6BB00FE2AA1 /* Hunter.m */,
+				FE4E94FD191DC6BB00FE2AA1 /* Minion.h */,
+				FE4E94FE191DC6BB00FE2AA1 /* Minion.m */,
+				FE4E94FF191DC6BB00FE2AA1 /* Priest.h */,
+				FE4E9500191DC6BB00FE2AA1 /* Priest.m */,
+				FE4E9503191DC6BB00FE2AA1 /* Seer.h */,
+				FE4E9504191DC6BB00FE2AA1 /* Seer.m */,
+				FE4E9505191DC6BB00FE2AA1 /* Vigilante.h */,
+				FE4E9506191DC6BB00FE2AA1 /* Vigilante.m */,
+				FE4E9507191DC6BB00FE2AA1 /* Villager.h */,
+				FE4E9508191DC6BB00FE2AA1 /* Villager.m */,
+				FE4E9509191DC6BB00FE2AA1 /* Werewolf.h */,
+				FE4E950A191DC6BB00FE2AA1 /* Werewolf.m */,
+			);
+			name = Roles;
+			sourceTree = "<group>";
+		};
+		FE77398E191C23500017A270 /* Game Setup View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE773990191C238A0017A270 /* LLLoadSetupViewController.h */,
+				FE773991191C238A0017A270 /* LLLoadSetupViewController.m */,
+				FE4E94D2191D92D400FE2AA1 /* LLCreateGameViewController.h */,
+				FE4E94D3191D92D400FE2AA1 /* LLCreateGameViewController.m */,
+				FE4E94D5191D94E500FE2AA1 /* LLStepperTableViewCell.h */,
+				FE4E94D6191D94E500FE2AA1 /* LLStepperTableViewCell.m */,
+			);
+			name = "Game Setup View Controllers";
+			sourceTree = "<group>";
+		};
+		FE77398F191C23720017A270 /* Game View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E94DB191DAF6100FE2AA1 /* LLGameViewController.h */,
+				FE4E94DC191DAF6100FE2AA1 /* LLGameViewController.m */,
+				FE4E94EF191DBF9600FE2AA1 /* LLCarouselController.h */,
+				FE4E94F0191DBF9600FE2AA1 /* LLCarouselController.m */,
+				FE4E94F5191DC1A200FE2AA1 /* LLTimerViewController.h */,
+				FE4E94F6191DC1A200FE2AA1 /* LLTimerViewController.m */,
+				FE4E94EB191DBE8000FE2AA1 /* Views */,
+			);
+			name = "Game View Controllers";
+			sourceTree = "<group>";
+		};
+		FE773993191C2D770017A270 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E94DF191DB00A00FE2AA1 /* Game.h */,
+				FE4E94E0191DB00A00FE2AA1 /* Game.m */,
+				FE4E94F8191DC69B00FE2AA1 /* Roles */,
+				FE4E94DE191DAFE700FE2AA1 /* Core Data Model */,
+			);
 			name = Model;
 			sourceTree = "<group>";
 		};
 		FE773997191C5DE10017A270 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				FE4E94E5191DBA7600FE2AA1 /* UIAlertView+Blocks.h */,
+				FE4E94E6191DBA7600FE2AA1 /* UIAlertView+Blocks.m */,
 				FE773998191C5DFD0017A270 /* AppDelegate+CoreDataContext.h */,
 				FE773999191C5DFD0017A270 /* AppDelegate+CoreDataContext.m */,
+				FE4E94D8191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.h */,
+				FE4E94D9191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -432,25 +546,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4E94F1191DBF9600FE2AA1 /* LLCarouselController.m in Sources */,
 				FE4E94CB191C64D000FE2AA1 /* _Player.m in Sources */,
 				FE48E91E191C1FF600F892CD /* LLAppDelegate.m in Sources */,
 				FE48E94A191C214A00F892CD /* TTCounterLabel.m in Sources */,
+				FE4E950B191DC6BB00FE2AA1 /* Assassin.m in Sources */,
+				FE4E94E1191DB00A00FE2AA1 /* Game.m in Sources */,
+				FE4E94DA191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.m in Sources */,
 				FE48E951191C215C00F892CD /* CRProductTour.m in Sources */,
 				FE48E945191C212700F892CD /* iCarousel.m in Sources */,
 				FE48E91A191C1FF600F892CD /* main.m in Sources */,
 				FE77399A191C5DFD0017A270 /* AppDelegate+CoreDataContext.m in Sources */,
+				FE4E94F7191DC1A200FE2AA1 /* LLTimerViewController.m in Sources */,
 				FE48E95C191C226700F892CD /* LLSettingsViewController.m in Sources */,
+				FE4E94D4191D92D400FE2AA1 /* LLCreateGameViewController.m in Sources */,
+				FE4E94DD191DAF6100FE2AA1 /* LLGameViewController.m in Sources */,
+				FE4E9512191DC6BB00FE2AA1 /* Villager.m in Sources */,
+				FE4E94E7191DBA7600FE2AA1 /* UIAlertView+Blocks.m in Sources */,
 				FE48E950191C215C00F892CD /* CRBubble.m in Sources */,
 				FE77398C191C22AD0017A270 /* LLRulesViewController.m in Sources */,
+				FE4E9510191DC6BB00FE2AA1 /* Seer.m in Sources */,
 				FE4E94D1191C6A1C00FE2AA1 /* LLConstants.m in Sources */,
+				FE4E950C191DC6BB00FE2AA1 /* Hunter.m in Sources */,
 				FE48E959191C220A00F892CD /* LLTitleViewController.m in Sources */,
+				FE4E950D191DC6BB00FE2AA1 /* Minion.m in Sources */,
 				FE48E94B191C214A00F892CD /* TTTAttributedLabel.m in Sources */,
+				FE4E950F191DC6BB00FE2AA1 /* Role.m in Sources */,
+				FE4E9513191DC6BB00FE2AA1 /* Werewolf.m in Sources */,
+				FE4E9511191DC6BB00FE2AA1 /* Vigilante.m in Sources */,
 				FE773992191C238A0017A270 /* LLLoadSetupViewController.m in Sources */,
 				FE773996191C2D840017A270 /* Model.xcdatamodeld in Sources */,
 				FE48E956191C21B000F892CD /* LLMainViewController.m in Sources */,
+				FE4E950E191DC6BB00FE2AA1 /* Priest.m in Sources */,
 				FE4E94CA191C64D000FE2AA1 /* _GameSetup.m in Sources */,
+				FE4E94D7191D94E500FE2AA1 /* LLStepperTableViewCell.m in Sources */,
 				FE4E94CD191C64D000FE2AA1 /* Player.m in Sources */,
 				FE4E94CC191C64D000FE2AA1 /* GameSetup.m in Sources */,
+				FE4E94EE191DBE9000FE2AA1 /* LLAlphaView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

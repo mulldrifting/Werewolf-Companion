@@ -9,7 +9,6 @@ const struct GameSetupAttributes GameSetupAttributes = {
 	.numAssassin = @"numAssassin",
 	.numHunter = @"numHunter",
 	.numMinion = @"numMinion",
-	.numPlayers = @"numPlayers",
 	.numPriest = @"numPriest",
 	.numSeer = @"numSeer",
 	.numVigilante = @"numVigilante",
@@ -67,11 +66,6 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 	}
 	if ([key isEqualToString:@"numMinionValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"numMinion"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
-	if ([key isEqualToString:@"numPlayersValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"numPlayers"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -217,32 +211,6 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 
 - (void)setPrimitiveNumMinionValue:(int16_t)value_ {
 	[self setPrimitiveNumMinion:[NSNumber numberWithShort:value_]];
-}
-
-
-
-
-
-@dynamic numPlayers;
-
-
-
-- (int16_t)numPlayersValue {
-	NSNumber *result = [self numPlayers];
-	return [result shortValue];
-}
-
-- (void)setNumPlayersValue:(int16_t)value_ {
-	[self setNumPlayers:[NSNumber numberWithShort:value_]];
-}
-
-- (int16_t)primitiveNumPlayersValue {
-	NSNumber *result = [self primitiveNumPlayers];
-	return [result shortValue];
-}
-
-- (void)setPrimitiveNumPlayersValue:(int16_t)value_ {
-	[self setPrimitiveNumPlayers:[NSNumber numberWithShort:value_]];
 }
 
 

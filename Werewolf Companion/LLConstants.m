@@ -8,6 +8,9 @@
 
 #import "LLConstants.h"
 
+NSString *const kDefaultTimerStartValue = @"kDefaultTimerStartValue";
+NSString *const kDefaultGameSetupsInitialized = @"kDefaultGameSetupsInitialized";
+
 @implementation LLConstants
 
 + (NSArray *)listOfDefinedRoles

@@ -9,6 +9,26 @@
 
 #import "_Player.h"
 
+@class Game;
+@class Role;
+
 @interface Player : _Player {}
-// Custom logic goes here.
+
+@property (weak, nonatomic) Game *game;
+@property (strong, nonatomic) Role *role;
+
+@property (copy, nonatomic) NSString *target;
+@property (strong, nonatomic) NSMutableArray *nightActions;
+@property (strong, nonatomic) NSMutableArray *nightGuesses;
+@property (strong, nonatomic) NSMutableArray *seerPeeks;
+@property (strong, nonatomic) NSMutableArray *priestSaves;
+@property (nonatomic) NSInteger index;
+
+@property (nonatomic) BOOL isDead;
+@property (nonatomic) BOOL isWolfTarget;
+@property (nonatomic) BOOL isPriestTarget;
+@property (nonatomic) BOOL isVigilanteTarget;
+
+-(id)initWithIndex:(NSInteger)index withGame:(Game *)game;
+
 @end

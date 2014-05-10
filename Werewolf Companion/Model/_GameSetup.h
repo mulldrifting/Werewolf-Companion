@@ -10,7 +10,6 @@ extern const struct GameSetupAttributes {
 	__unsafe_unretained NSString *numAssassin;
 	__unsafe_unretained NSString *numHunter;
 	__unsafe_unretained NSString *numMinion;
-	__unsafe_unretained NSString *numPlayers;
 	__unsafe_unretained NSString *numPriest;
 	__unsafe_unretained NSString *numSeer;
 	__unsafe_unretained NSString *numVigilante;
@@ -24,7 +23,6 @@ extern const struct GameSetupRelationships {
 
 extern const struct GameSetupFetchedProperties {
 } GameSetupFetchedProperties;
-
 
 
 
@@ -113,20 +111,6 @@ extern const struct GameSetupFetchedProperties {
 - (void)setNumMinionValue:(int16_t)value_;
 
 //- (BOOL)validateNumMinion:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSNumber* numPlayers;
-
-
-
-@property int16_t numPlayersValue;
-- (int16_t)numPlayersValue;
-- (void)setNumPlayersValue:(int16_t)value_;
-
-//- (BOOL)validateNumPlayers:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -264,15 +248,6 @@ extern const struct GameSetupFetchedProperties {
 
 - (int16_t)primitiveNumMinionValue;
 - (void)setPrimitiveNumMinionValue:(int16_t)value_;
-
-
-
-
-- (NSNumber*)primitiveNumPlayers;
-- (void)setPrimitiveNumPlayers:(NSNumber*)value;
-
-- (int16_t)primitiveNumPlayersValue;
-- (void)setPrimitiveNumPlayersValue:(int16_t)value_;
 
 
 

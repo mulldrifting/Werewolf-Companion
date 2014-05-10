@@ -10,5 +10,9 @@
 #import "_GameSetup.h"
 
 @interface GameSetup : _GameSetup {}
-// Custom logic goes here.
+
+
+- (NSInteger)numPlayers;
+- (BOOL)hasSameAttributesAs:(NSDictionary *)dictionary;
+
 @end

@@ -19,6 +19,34 @@
 
 @implementation GameSetup
 
-// Custom logic goes here.
+
+- (NSInteger)numPlayers
+{
+    NSInteger total = 0;
+    NSDictionary *attributes = [[self entity] attributesByName];
+    
+    for (NSString *attribute in attributes) {
+        if ([[attribute substringToIndex:3] isEqualToString:@"num"]) {
+            id value = [self valueForKey:attribute];
+            NSLog(@"attribute: %@ value: %@", attribute, value);
+            total += [value integerValue];
+        }
+    }
+    
+    return total;
+}
+
+- (BOOL)hasSameAttributesAs:(NSDictionary *)dictionary
+{
+    NSDictionary *attributes = [[self entity] attributesByName];
+
+    for (NSString *attribute in attributes) {
+        if ([self valueForKey:attribute] != [dictionary valueForKey:attribute]) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
 
 @end
