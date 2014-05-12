@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, roleType)
     kVigilante,
     kHunter,
     kMinion,
-    kAssassin
+    kNemesis
 };
 
 

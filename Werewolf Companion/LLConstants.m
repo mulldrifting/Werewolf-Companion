@@ -26,7 +26,7 @@ NSString *const kDefaultGameSetupsInitialized = @"kDefaultGameSetupsInitialized"
                  @"Vigilante",
                  @"Hunter",
                  @"Minion",
-                 @"Assassin"
+                 @"Nemesis"
                  ];
     });
     return inst;
@@ -45,7 +45,7 @@ NSString *const kDefaultGameSetupsInitialized = @"kDefaultGameSetupsInitialized"
                  @"The Vigilante is a Villager who can shoot someone at night once per game. Hopefully a Werewolf.",
                  @"The Hunter is a Villager who lets the Village win if they are the last Villager alive.",
                  @"The Minion is a Villager who wins if the Werewolves win but doesn't count as one. The Minion knows who the Werewolves are but not vice versa.",
-                 @"The Assassin starts with a random Villager target. Their goal is to convince the Village to kill that person in the Day."
+                 @"The Nemesis starts with a random Villager target. Their goal is to convince the Village to kill that person in the Day."
                  ];
     });
     return inst;

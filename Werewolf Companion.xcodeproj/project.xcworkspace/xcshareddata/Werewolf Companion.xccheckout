@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E547E5F6-7FD5-48CD-BCD6-F571F417F3E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Werewolf Companion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DA2A0D64-DC9C-41CE-B452-70F730BDE5B9</key>
+		<string>https://github.com/neruka/Werewolf-Companion</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Werewolf Companion.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DA2A0D64-DC9C-41CE-B452-70F730BDE5B9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/neruka/Werewolf-Companion</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DA2A0D64-DC9C-41CE-B452-70F730BDE5B9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DA2A0D64-DC9C-41CE-B452-70F730BDE5B9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Werewolf Companion</string>
+		</dict>
+	</array>
+</dict>
+</plist>

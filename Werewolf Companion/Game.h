@@ -17,23 +17,21 @@
 @property (weak, nonatomic) Player *currentPlayer;
 
 @property (strong, nonatomic) NSMutableArray *players;
-@property (strong, nonatomic) NSMutableArray *roles;
 @property (strong, nonatomic) NSMutableArray *wolves;
 @property (strong, nonatomic) NSMutableArray *wolfTargets;
-@property (strong, nonatomic) NSMutableArray *gameHistory;
+@property (strong, nonatomic) NSString *gameHistory;
 
 @property (nonatomic) NSInteger numPlayers;
 @property (nonatomic) NSInteger currentRound;
 @property (nonatomic) BOOL isNight;
 @property (nonatomic) BOOL isOver;
+@property (nonatomic) BOOL townDidNotKill;
 @property (nonatomic) BOOL didWrap;
 
 - (id)initWithGameSetup:(GameSetup *)gameSetup;
 
 - (BOOL)isDuplicateName:(NSString*)name;
-- (int)nextAlivePlayer:(int)index;
-- (Player*)currentPlayer;
-- (Player*)previousPlayer;
+- (Player*)nextAlivePlayer:(int)index;
 - (Player*)randomPlayer;
 - (Player*)randomNonWerewolf;
 - (Player*)randomVillager;

@@ -7,15 +7,15 @@
 extern const struct GameSetupAttributes {
 	__unsafe_unretained NSString *isDefault;
 	__unsafe_unretained NSString *name;
-	__unsafe_unretained NSString *numAssassin;
 	__unsafe_unretained NSString *numHunter;
 	__unsafe_unretained NSString *numMinion;
+	__unsafe_unretained NSString *numNemesis;
 	__unsafe_unretained NSString *numPriest;
 	__unsafe_unretained NSString *numSeer;
 	__unsafe_unretained NSString *numVigilante;
 	__unsafe_unretained NSString *numVillager;
 	__unsafe_unretained NSString *numWerewolf;
-	__unsafe_unretained NSString *wolvesSeeRoleOfKill;
+	__unsafe_unretained NSString *seerPeeksNightZero;
 } GameSetupAttributes;
 
 extern const struct GameSetupRelationships {
@@ -74,20 +74,6 @@ extern const struct GameSetupFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSNumber* numAssassin;
-
-
-
-@property int16_t numAssassinValue;
-- (int16_t)numAssassinValue;
-- (void)setNumAssassinValue:(int16_t)value_;
-
-//- (BOOL)validateNumAssassin:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
 @property (nonatomic, strong) NSNumber* numHunter;
 
 
@@ -111,6 +97,20 @@ extern const struct GameSetupFetchedProperties {
 - (void)setNumMinionValue:(int16_t)value_;
 
 //- (BOOL)validateNumMinion:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSNumber* numNemesis;
+
+
+
+@property int16_t numNemesisValue;
+- (int16_t)numNemesisValue;
+- (void)setNumNemesisValue:(int16_t)value_;
+
+//- (BOOL)validateNumNemesis:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -186,15 +186,15 @@ extern const struct GameSetupFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSNumber* wolvesSeeRoleOfKill;
+@property (nonatomic, strong) NSNumber* seerPeeksNightZero;
 
 
 
-@property BOOL wolvesSeeRoleOfKillValue;
-- (BOOL)wolvesSeeRoleOfKillValue;
-- (void)setWolvesSeeRoleOfKillValue:(BOOL)value_;
+@property BOOL seerPeeksNightZeroValue;
+- (BOOL)seerPeeksNightZeroValue;
+- (void)setSeerPeeksNightZeroValue:(BOOL)value_;
 
-//- (BOOL)validateWolvesSeeRoleOfKill:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateSeerPeeksNightZero:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -225,15 +225,6 @@ extern const struct GameSetupFetchedProperties {
 
 
 
-- (NSNumber*)primitiveNumAssassin;
-- (void)setPrimitiveNumAssassin:(NSNumber*)value;
-
-- (int16_t)primitiveNumAssassinValue;
-- (void)setPrimitiveNumAssassinValue:(int16_t)value_;
-
-
-
-
 - (NSNumber*)primitiveNumHunter;
 - (void)setPrimitiveNumHunter:(NSNumber*)value;
 
@@ -248,6 +239,15 @@ extern const struct GameSetupFetchedProperties {
 
 - (int16_t)primitiveNumMinionValue;
 - (void)setPrimitiveNumMinionValue:(int16_t)value_;
+
+
+
+
+- (NSNumber*)primitiveNumNemesis;
+- (void)setPrimitiveNumNemesis:(NSNumber*)value;
+
+- (int16_t)primitiveNumNemesisValue;
+- (void)setPrimitiveNumNemesisValue:(int16_t)value_;
 
 
 
@@ -297,11 +297,11 @@ extern const struct GameSetupFetchedProperties {
 
 
 
-- (NSNumber*)primitiveWolvesSeeRoleOfKill;
-- (void)setPrimitiveWolvesSeeRoleOfKill:(NSNumber*)value;
+- (NSNumber*)primitiveSeerPeeksNightZero;
+- (void)setPrimitiveSeerPeeksNightZero:(NSNumber*)value;
 
-- (BOOL)primitiveWolvesSeeRoleOfKillValue;
-- (void)setPrimitiveWolvesSeeRoleOfKillValue:(BOOL)value_;
+- (BOOL)primitiveSeerPeeksNightZeroValue;
+- (void)setPrimitiveSeerPeeksNightZeroValue:(BOOL)value_;
 
 
 

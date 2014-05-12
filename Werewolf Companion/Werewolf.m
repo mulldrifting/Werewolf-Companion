@@ -37,4 +37,15 @@
     return [NSString stringWithFormat:@"%@. Who do you want to kill?", [self.game listOfWolves]];
 }
 
+- (NSString *)verifyNightAction
+{
+    return @"If Werewolves do not agree on the kill, a target will be chosen at random from among the picks.";
+}
+
+- (void)performNightActionWithSelectedPlayer:(Player *)player
+{
+    [super performNightActionWithSelectedPlayer:player];
+    [self.game.wolfTargets addObject:player];
+}
+
 @end

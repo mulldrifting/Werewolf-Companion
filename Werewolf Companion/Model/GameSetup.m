@@ -28,7 +28,6 @@
     for (NSString *attribute in attributes) {
         if ([[attribute substringToIndex:3] isEqualToString:@"num"]) {
             id value = [self valueForKey:attribute];
-            NSLog(@"attribute: %@ value: %@", attribute, value);
             total += [value integerValue];
         }
     }

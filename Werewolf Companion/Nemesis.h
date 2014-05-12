@@ -1,5 +1,5 @@
 //
-//  Assassin.h
+//  Nemesis.h
 //  Werewolf
 //
 //  Created by Lauren Lee on 4/26/14.
@@ -8,7 +8,7 @@
 
 #import "Role.h"
 
-@interface Assassin : Role
+@interface Nemesis : Role
 
 -(id)initWithGame:(Game*)game;
 - (NSString *)getNightZeroInfo;

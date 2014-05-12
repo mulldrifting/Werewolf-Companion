@@ -13,5 +13,6 @@
 -(id)initWithGame:(Game*)game;
 -(NSString *)getNightZeroInfo;
 -(NSString *)tapLabel;
+- (void)performNightActionWithSelectedPlayer:(Player *)player;
 
 @end

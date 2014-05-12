@@ -36,4 +36,9 @@
     return [NSString stringWithFormat:@"%@. Who do you think they should kill tonight?", [self.game listOfWolves]];
 }
 
+- (NSString *)verifyNightAction
+{
+    return @"Do you think this is right kill?";
+}
+
 @end

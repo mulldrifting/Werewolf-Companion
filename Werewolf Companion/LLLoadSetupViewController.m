@@ -14,8 +14,8 @@
 
 typedef NS_ENUM(NSInteger, gameSetupType)
 {
-    kCustomGameSetup,
-    kDefaultGameSetup
+    kDefaultGameSetup,
+    kCustomGameSetup
 };
 
 @interface LLLoadSetupViewController () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
@@ -84,9 +84,12 @@ typedef NS_ENUM(NSInteger, gameSetupType)
     NSSortDescriptor *defaultSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"isDefault" ascending:YES];
     [fetchRequest setSortDescriptors:@[nameSortDescriptor, defaultSortDescriptor]];
     
-    NSArray *setups = [self.objectContext executeFetchRequest:fetchRequest error:&error];
+//    NSArray *setups = [self.objectContext executeFetchRequest:fetchRequest error:&error];
     
-    self.resultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.objectContext sectionNameKeyPath:@"isDefault" cacheName:@"SetupCache"];
+    self.resultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                 managedObjectContext:self.objectContext
+                                                                   sectionNameKeyPath:@"isDefault"
+                                                                            cacheName:@"SetupCache"];
     self.resultsController.delegate = self;
     [self.resultsController performFetch:&error];
     
@@ -96,15 +99,13 @@ typedef NS_ENUM(NSInteger, gameSetupType)
 - (void)addInitialGameSetups
 {
     
-    GameSetup *assassinSetup = [NSEntityDescription insertNewObjectForEntityForName:@"GameSetup"
+    GameSetup *nemesisSetup = [NSEntityDescription insertNewObjectForEntityForName:@"GameSetup"
                                                              inManagedObjectContext:self.objectContext];
-    
-    assassinSetup.name = @"5P Assassin";
-    assassinSetup.numWerewolf = @1;
-    assassinSetup.numVillager = @3;
-    assassinSetup.numAssassin = @1;
-    assassinSetup.wolvesSeeRoleOfKill = @NO;
-    assassinSetup.isDefault = @YES;
+    nemesisSetup.name = @"5P Nemesis";
+    nemesisSetup.numWerewolf = @1;
+    nemesisSetup.numVillager = @3;
+    nemesisSetup.numNemesis = @1;
+    nemesisSetup.isDefault = @YES;
     
     GameSetup *fivesSetup = [NSEntityDescription insertNewObjectForEntityForName:@"GameSetup"
                                                           inManagedObjectContext:self.objectContext];
@@ -122,7 +123,6 @@ typedef NS_ENUM(NSInteger, gameSetupType)
     sevensSetup.numWerewolf = @2;
     sevensSetup.numVillager = @4;
     sevensSetup.numSeer = @1;
-    sevensSetup.wolvesSeeRoleOfKill = @NO;
     sevensSetup.isDefault = @YES;
     
     GameSetup *ninesSetup = [NSEntityDescription insertNewObjectForEntityForName:@"GameSetup"

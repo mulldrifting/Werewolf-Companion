@@ -6,15 +6,15 @@
 const struct GameSetupAttributes GameSetupAttributes = {
 	.isDefault = @"isDefault",
 	.name = @"name",
-	.numAssassin = @"numAssassin",
 	.numHunter = @"numHunter",
 	.numMinion = @"numMinion",
+	.numNemesis = @"numNemesis",
 	.numPriest = @"numPriest",
 	.numSeer = @"numSeer",
 	.numVigilante = @"numVigilante",
 	.numVillager = @"numVillager",
 	.numWerewolf = @"numWerewolf",
-	.wolvesSeeRoleOfKill = @"wolvesSeeRoleOfKill",
+	.seerPeeksNightZero = @"seerPeeksNightZero",
 };
 
 const struct GameSetupRelationships GameSetupRelationships = {
@@ -54,11 +54,6 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
-	if ([key isEqualToString:@"numAssassinValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"numAssassin"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
 	if ([key isEqualToString:@"numHunterValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"numHunter"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -66,6 +61,11 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 	}
 	if ([key isEqualToString:@"numMinionValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"numMinion"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
+	if ([key isEqualToString:@"numNemesisValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"numNemesis"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -94,8 +94,8 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
-	if ([key isEqualToString:@"wolvesSeeRoleOfKillValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"wolvesSeeRoleOfKill"];
+	if ([key isEqualToString:@"seerPeeksNightZeroValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"seerPeeksNightZero"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -134,32 +134,6 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 
 @dynamic name;
 
-
-
-
-
-
-@dynamic numAssassin;
-
-
-
-- (int16_t)numAssassinValue {
-	NSNumber *result = [self numAssassin];
-	return [result shortValue];
-}
-
-- (void)setNumAssassinValue:(int16_t)value_ {
-	[self setNumAssassin:[NSNumber numberWithShort:value_]];
-}
-
-- (int16_t)primitiveNumAssassinValue {
-	NSNumber *result = [self primitiveNumAssassin];
-	return [result shortValue];
-}
-
-- (void)setPrimitiveNumAssassinValue:(int16_t)value_ {
-	[self setPrimitiveNumAssassin:[NSNumber numberWithShort:value_]];
-}
 
 
 
@@ -211,6 +185,32 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 
 - (void)setPrimitiveNumMinionValue:(int16_t)value_ {
 	[self setPrimitiveNumMinion:[NSNumber numberWithShort:value_]];
+}
+
+
+
+
+
+@dynamic numNemesis;
+
+
+
+- (int16_t)numNemesisValue {
+	NSNumber *result = [self numNemesis];
+	return [result shortValue];
+}
+
+- (void)setNumNemesisValue:(int16_t)value_ {
+	[self setNumNemesis:[NSNumber numberWithShort:value_]];
+}
+
+- (int16_t)primitiveNumNemesisValue {
+	NSNumber *result = [self primitiveNumNemesis];
+	return [result shortValue];
+}
+
+- (void)setPrimitiveNumNemesisValue:(int16_t)value_ {
+	[self setPrimitiveNumNemesis:[NSNumber numberWithShort:value_]];
 }
 
 
@@ -347,26 +347,26 @@ const struct GameSetupFetchedProperties GameSetupFetchedProperties = {
 
 
 
-@dynamic wolvesSeeRoleOfKill;
+@dynamic seerPeeksNightZero;
 
 
 
-- (BOOL)wolvesSeeRoleOfKillValue {
-	NSNumber *result = [self wolvesSeeRoleOfKill];
+- (BOOL)seerPeeksNightZeroValue {
+	NSNumber *result = [self seerPeeksNightZero];
 	return [result boolValue];
 }
 
-- (void)setWolvesSeeRoleOfKillValue:(BOOL)value_ {
-	[self setWolvesSeeRoleOfKill:[NSNumber numberWithBool:value_]];
+- (void)setSeerPeeksNightZeroValue:(BOOL)value_ {
+	[self setSeerPeeksNightZero:[NSNumber numberWithBool:value_]];
 }
 
-- (BOOL)primitiveWolvesSeeRoleOfKillValue {
-	NSNumber *result = [self primitiveWolvesSeeRoleOfKill];
+- (BOOL)primitiveSeerPeeksNightZeroValue {
+	NSNumber *result = [self primitiveSeerPeeksNightZero];
 	return [result boolValue];
 }
 
-- (void)setPrimitiveWolvesSeeRoleOfKillValue:(BOOL)value_ {
-	[self setPrimitiveWolvesSeeRoleOfKill:[NSNumber numberWithBool:value_]];
+- (void)setPrimitiveSeerPeeksNightZeroValue:(BOOL)value_ {
+	[self setPrimitiveSeerPeeksNightZero:[NSNumber numberWithBool:value_]];
 }
 
 

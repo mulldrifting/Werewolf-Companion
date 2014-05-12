@@ -8,7 +8,7 @@
 
 
 #import "Player.h"
-
+#import "Role.h"
 
 @interface Player ()
 
@@ -19,6 +19,32 @@
 
 @implementation Player
 
-// Custom logic goes here.
+@synthesize game;
+@synthesize role;
+@synthesize targetName;
+@synthesize nightActions;
+@synthesize index;
+@synthesize isDead;
+@synthesize isPriestTarget;
+@synthesize isWolfTarget;
+@synthesize isVigilanteTarget;
+
+- (void)initializeNewPlayerWithGame:(Game *)theGame atIndex:(NSInteger)theIndex
+{
+    self.game = theGame;
+    self.nightActions = [NSMutableArray new];
+    self.index = theIndex;
+    self.isDead = NO;
+    self.isPriestTarget = NO;
+    self.isWolfTarget = NO;
+    self.isVigilanteTarget = NO;
+    
+    self.name = [NSString stringWithFormat:@"Player %d", self.index];
+}
+
+- (void)performNightActionWithSelectedPlayer:(Player *)player
+{
+    [self.nightActions addObject:player];
+}
 
 @end

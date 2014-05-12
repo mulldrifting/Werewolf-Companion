@@ -12,5 +12,6 @@
 
 -(id)initWithGame:(Game*)game;
 -(NSString *)tapLabel;
+- (void)performNightActionWithSelectedPlayer:(Player *)player;
 
 @end

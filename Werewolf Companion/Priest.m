@@ -26,4 +26,15 @@
     return @"Priest, who do you want to save?";
 }
 
+- (NSString *)verifyNightAction
+{
+    return @"Do you want to protect them?";
+}
+
+- (void)performNightActionWithSelectedPlayer:(Player *)player
+{
+    [super performNightActionWithSelectedPlayer:player];
+    player.isPriestTarget = YES;
+}
+
 @end

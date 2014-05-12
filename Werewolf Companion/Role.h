@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Game.h"
 #import "Player.h"
+#import "GameSetup.h"
 
 @interface Role : NSObject
 
@@ -23,6 +24,7 @@
 -(id)initWithGame:(Game*)game;
 -(NSString *)getNightZeroInfo;
 -(NSString *)tapLabel;
-
+-(NSString *)verifyNightAction;
+- (void)performNightActionWithSelectedPlayer:(Player *)player;
 
 @end

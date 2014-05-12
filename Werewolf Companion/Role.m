@@ -16,8 +16,8 @@
     if (self = [super init])
     {
         _game = game;
-        _faction = @"Villager";
-        _seerSeesAs = @"Non-Werewolf";
+        _faction = @"Town";
+        _seerSeesAs = @"Human";
         _oncePerGameUsed = NO;
     }
     return self;
@@ -31,6 +31,16 @@
 -(NSString *)tapLabel
 {
     return [NSString stringWithFormat:@"%@, guess who you think the Werewolf is!", _name];
+}
+
+-(NSString *)verifyNightAction
+{
+    return @"Do you think this is the Werewolf?";
+}
+
+- (void)performNightActionWithSelectedPlayer:(Player *)player
+{
+    [self.player.nightActions addObject:player];
 }
 
 @end

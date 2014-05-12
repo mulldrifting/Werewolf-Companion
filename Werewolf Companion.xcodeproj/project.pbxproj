@@ -56,7 +56,7 @@
 		FE4E94EE191DBE9000FE2AA1 /* LLAlphaView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94ED191DBE9000FE2AA1 /* LLAlphaView.m */; };
 		FE4E94F1191DBF9600FE2AA1 /* LLCarouselController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94F0191DBF9600FE2AA1 /* LLCarouselController.m */; };
 		FE4E94F7191DC1A200FE2AA1 /* LLTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94F6191DC1A200FE2AA1 /* LLTimerViewController.m */; };
-		FE4E950B191DC6BB00FE2AA1 /* Assassin.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94FA191DC6BB00FE2AA1 /* Assassin.m */; };
+		FE4E950B191DC6BB00FE2AA1 /* Nemesis.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94FA191DC6BB00FE2AA1 /* Nemesis.m */; };
 		FE4E950C191DC6BB00FE2AA1 /* Hunter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94FC191DC6BB00FE2AA1 /* Hunter.m */; };
 		FE4E950D191DC6BB00FE2AA1 /* Minion.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E94FE191DC6BB00FE2AA1 /* Minion.m */; };
 		FE4E950E191DC6BB00FE2AA1 /* Priest.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9500191DC6BB00FE2AA1 /* Priest.m */; };
@@ -65,6 +65,7 @@
 		FE4E9511191DC6BB00FE2AA1 /* Vigilante.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9506191DC6BB00FE2AA1 /* Vigilante.m */; };
 		FE4E9512191DC6BB00FE2AA1 /* Villager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9508191DC6BB00FE2AA1 /* Villager.m */; };
 		FE4E9513191DC6BB00FE2AA1 /* Werewolf.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E950A191DC6BB00FE2AA1 /* Werewolf.m */; };
+		FE4E9516191DE4BE00FE2AA1 /* LLEndGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4E9515191DE4BE00FE2AA1 /* LLEndGameViewController.m */; };
 		FE77398C191C22AD0017A270 /* LLRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE77398B191C22AD0017A270 /* LLRulesViewController.m */; };
 		FE773992191C238A0017A270 /* LLLoadSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE773991191C238A0017A270 /* LLLoadSetupViewController.m */; };
 		FE773996191C2D840017A270 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE773994191C2D840017A270 /* Model.xcdatamodeld */; };
@@ -150,8 +151,8 @@
 		FE4E94F0191DBF9600FE2AA1 /* LLCarouselController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarouselController.m; sourceTree = "<group>"; };
 		FE4E94F5191DC1A200FE2AA1 /* LLTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTimerViewController.h; sourceTree = "<group>"; };
 		FE4E94F6191DC1A200FE2AA1 /* LLTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTimerViewController.m; sourceTree = "<group>"; };
-		FE4E94F9191DC6BB00FE2AA1 /* Assassin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assassin.h; sourceTree = "<group>"; };
-		FE4E94FA191DC6BB00FE2AA1 /* Assassin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assassin.m; sourceTree = "<group>"; };
+		FE4E94F9191DC6BB00FE2AA1 /* Nemesis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nemesis.h; sourceTree = "<group>"; };
+		FE4E94FA191DC6BB00FE2AA1 /* Nemesis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nemesis.m; sourceTree = "<group>"; };
 		FE4E94FB191DC6BB00FE2AA1 /* Hunter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hunter.h; sourceTree = "<group>"; };
 		FE4E94FC191DC6BB00FE2AA1 /* Hunter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hunter.m; sourceTree = "<group>"; };
 		FE4E94FD191DC6BB00FE2AA1 /* Minion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Minion.h; sourceTree = "<group>"; };
@@ -168,6 +169,8 @@
 		FE4E9508191DC6BB00FE2AA1 /* Villager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Villager.m; sourceTree = "<group>"; };
 		FE4E9509191DC6BB00FE2AA1 /* Werewolf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Werewolf.h; sourceTree = "<group>"; };
 		FE4E950A191DC6BB00FE2AA1 /* Werewolf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Werewolf.m; sourceTree = "<group>"; };
+		FE4E9514191DE4BE00FE2AA1 /* LLEndGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLEndGameViewController.h; sourceTree = "<group>"; };
+		FE4E9515191DE4BE00FE2AA1 /* LLEndGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLEndGameViewController.m; sourceTree = "<group>"; };
 		FE77398A191C22AD0017A270 /* LLRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRulesViewController.h; sourceTree = "<group>"; };
 		FE77398B191C22AD0017A270 /* LLRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRulesViewController.m; sourceTree = "<group>"; };
 		FE773990191C238A0017A270 /* LLLoadSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLLoadSetupViewController.h; sourceTree = "<group>"; };
@@ -337,10 +340,6 @@
 				FE4E94C3191C64D000FE2AA1 /* _GameSetup.m */,
 				FE4E94C4191C64D000FE2AA1 /* _Player.h */,
 				FE4E94C5191C64D000FE2AA1 /* _Player.m */,
-				FE4E94C6191C64D000FE2AA1 /* GameSetup.h */,
-				FE4E94C7191C64D000FE2AA1 /* GameSetup.m */,
-				FE4E94C8191C64D000FE2AA1 /* Player.h */,
-				FE4E94C9191C64D000FE2AA1 /* Player.m */,
 			);
 			name = "Core Data Model";
 			sourceTree = "<group>";
@@ -359,8 +358,8 @@
 			children = (
 				FE4E9501191DC6BB00FE2AA1 /* Role.h */,
 				FE4E9502191DC6BB00FE2AA1 /* Role.m */,
-				FE4E94F9191DC6BB00FE2AA1 /* Assassin.h */,
-				FE4E94FA191DC6BB00FE2AA1 /* Assassin.m */,
+				FE4E94F9191DC6BB00FE2AA1 /* Nemesis.h */,
+				FE4E94FA191DC6BB00FE2AA1 /* Nemesis.m */,
 				FE4E94FB191DC6BB00FE2AA1 /* Hunter.h */,
 				FE4E94FC191DC6BB00FE2AA1 /* Hunter.m */,
 				FE4E94FD191DC6BB00FE2AA1 /* Minion.h */,
@@ -401,6 +400,8 @@
 				FE4E94F0191DBF9600FE2AA1 /* LLCarouselController.m */,
 				FE4E94F5191DC1A200FE2AA1 /* LLTimerViewController.h */,
 				FE4E94F6191DC1A200FE2AA1 /* LLTimerViewController.m */,
+				FE4E9514191DE4BE00FE2AA1 /* LLEndGameViewController.h */,
+				FE4E9515191DE4BE00FE2AA1 /* LLEndGameViewController.m */,
 				FE4E94EB191DBE8000FE2AA1 /* Views */,
 			);
 			name = "Game View Controllers";
@@ -411,6 +412,10 @@
 			children = (
 				FE4E94DF191DB00A00FE2AA1 /* Game.h */,
 				FE4E94E0191DB00A00FE2AA1 /* Game.m */,
+				FE4E94C6191C64D000FE2AA1 /* GameSetup.h */,
+				FE4E94C7191C64D000FE2AA1 /* GameSetup.m */,
+				FE4E94C8191C64D000FE2AA1 /* Player.h */,
+				FE4E94C9191C64D000FE2AA1 /* Player.m */,
 				FE4E94F8191DC69B00FE2AA1 /* Roles */,
 				FE4E94DE191DAFE700FE2AA1 /* Core Data Model */,
 			);
@@ -546,11 +551,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4E9516191DE4BE00FE2AA1 /* LLEndGameViewController.m in Sources */,
 				FE4E94F1191DBF9600FE2AA1 /* LLCarouselController.m in Sources */,
 				FE4E94CB191C64D000FE2AA1 /* _Player.m in Sources */,
 				FE48E91E191C1FF600F892CD /* LLAppDelegate.m in Sources */,
 				FE48E94A191C214A00F892CD /* TTCounterLabel.m in Sources */,
-				FE4E950B191DC6BB00FE2AA1 /* Assassin.m in Sources */,
+				FE4E950B191DC6BB00FE2AA1 /* Nemesis.m in Sources */,
 				FE4E94E1191DB00A00FE2AA1 /* Game.m in Sources */,
 				FE4E94DA191D9C1400FE2AA1 /* NSManagedObject+DeepCopying.m in Sources */,
 				FE48E951191C215C00F892CD /* CRProductTour.m in Sources */,

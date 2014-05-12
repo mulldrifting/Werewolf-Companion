@@ -17,18 +17,20 @@
 @property (weak, nonatomic) Game *game;
 @property (strong, nonatomic) Role *role;
 
-@property (copy, nonatomic) NSString *target;
+@property (copy, nonatomic) NSString *targetName;
 @property (strong, nonatomic) NSMutableArray *nightActions;
-@property (strong, nonatomic) NSMutableArray *nightGuesses;
-@property (strong, nonatomic) NSMutableArray *seerPeeks;
-@property (strong, nonatomic) NSMutableArray *priestSaves;
+//@property (strong, nonatomic) NSMutableArray *nightGuesses;
+//@property (strong, nonatomic) NSMutableArray *seerPeeks;
+//@property (strong, nonatomic) NSMutableArray *priestSaves;
 @property (nonatomic) NSInteger index;
 
 @property (nonatomic) BOOL isDead;
 @property (nonatomic) BOOL isWolfTarget;
 @property (nonatomic) BOOL isPriestTarget;
 @property (nonatomic) BOOL isVigilanteTarget;
+@property (nonatomic) BOOL isNemesisTarget;
 
--(id)initWithIndex:(NSInteger)index withGame:(Game *)game;
+- (void)initializeNewPlayerWithGame:(Game *)theGame atIndex:(NSInteger)theIndex;
+- (void)performNightActionWithSelectedPlayer:(Player *)player;
 
 @end

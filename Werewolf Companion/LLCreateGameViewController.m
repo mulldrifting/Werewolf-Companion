@@ -11,11 +11,13 @@
 
 #import "LLCreateGameViewController.h"
 #import "LLStepperTableViewCell.h"
+#import "LLGameViewController.h"
 #import "GameSetup.h"
+#import "Game.h"
 
 @interface LLCreateGameViewController () <UITableViewDataSource, UITableViewDelegate, LLStepperTableViewCellProtocol>
 
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *startButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSIndexPath *expandingIndexPath;
 @property (nonatomic) NSIndexPath *expandedIndexPath;
@@ -53,12 +55,18 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
-// change dictionary value for role in roleNumbers
-// sent from Stepper Table View Cell
+#pragma mark - Stepper Table View Cell Delegate Method
+
 - (void)setValue:(int)value forRole:(NSString*)role
 {
     NSString *key = [@"num" stringByAppendingString:role];
-    [self.gameSetup setValue:[NSNumber numberWithInt:value] forKey:key];
+    [self.setupAttributes setValue:[NSNumber numberWithInt:value] forKey:key];
+    if ([self numPlayersInCurrentSetup] < 5 || [self numPlayersInCurrentSetup] == 6) {
+        [self.startButton setEnabled:NO];
+    }
+    else {
+        [self.startButton setEnabled:YES];
+    }
 }
 
 #pragma mark - Attributes Dictionary Methods
@@ -245,6 +253,17 @@
     return newGameSetup;
 }
 
+- (NSInteger)numPlayersInCurrentSetup
+{
+    NSInteger total = 0;
+    for (NSString *attribute in [self.setupAttributes allKeys]) {
+        if ([[attribute substringToIndex:3] isEqualToString:@"num"]) {
+            NSInteger value = [[self.setupAttributes objectForKey:attribute] integerValue];
+            total += value;
+        }
+    }
+    return total;
+}
 
 #pragma mark - Navigation
 
@@ -253,10 +272,10 @@
 {
     if ([segue.identifier isEqualToString:@"showGameViewSegue"]) {
         
-//        GameViewController *destination = segue.destinationViewController;
-//        
-//        Game *newGame = [[Game alloc] initWithGameSetup:self.gameSetup];
-//        destination.game = newGame;
+        LLGameViewController *destination = segue.destinationViewController;
+        
+        Game *newGame = [[Game alloc] initWithGameSetup:self.gameSetup];
+        destination.game = newGame;
     }
 }
 

@@ -26,4 +26,15 @@
     return @"Vigilante, do you want to kill someone tonight? You get one shot per game.";
 }
 
+- (NSString *)verifyNightAction
+{
+    return @"Do you want to shoot them? You only get one bullet.";
+}
+
+- (void)performNightActionWithSelectedPlayer:(Player *)player
+{
+    [super performNightActionWithSelectedPlayer:player];
+    player.isVigilanteTarget = YES;
+}
+
 @end

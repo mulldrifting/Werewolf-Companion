@@ -25,11 +25,11 @@
 {
     NSString *message = [super getNightZeroInfo];
     Player *randomPlayer = [self.game randomNonWerewolf];
-    BOOL doesSeerPeek = [[self.game.gameSetup.settings objectForKey:@"SEER_PEEKS_NIGHT_ZERO"] boolValue];
+    BOOL doesSeerPeek = [self.game.gameSetup.seerPeeksNightZero boolValue];
     
     if (doesSeerPeek) {
         message = [message stringByAppendingString:[NSString stringWithFormat:@"\n\nYou peek, and %@ looks like a %@", randomPlayer.name, randomPlayer.role.seerSeesAs]];
-        [self.player.seerPeeks addObject:randomPlayer];
+        [self.player.nightActions addObject:randomPlayer];
     }
     
     return message;
@@ -38,6 +38,11 @@
 - (NSString *)tapLabel
 {
     return @"Seer, who do you want to peek?";
+}
+
+- (NSString *)verifyNightAction
+{
+    return @"Do you want to peek them?";
 }
 
 @end
