@@ -64,6 +64,9 @@
     if ([self numPlayersInCurrentSetup] < 5 || [self numPlayersInCurrentSetup] == 6) {
         [self.startButton setEnabled:NO];
     }
+    else if ([self.setupAttributes objectForKey:@"numNemesis"] > [self.setupAttributes objectForKey:@"numVillager"]) {
+        [self.startButton setEnabled:NO];
+    }
     else {
         [self.startButton setEnabled:YES];
     }

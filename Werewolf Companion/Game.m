@@ -230,7 +230,7 @@
 - (Player*)randomVillager
 {
     Player *randomPlayer = [self randomPlayer];
-    while (![randomPlayer.role isKindOfClass:[Villager class]]) {
+    while (!randomPlayer.role.roleID == kVillager || randomPlayer.isNemesisTarget == YES) {
         randomPlayer = [self randomPlayer];
     }
     return randomPlayer;

@@ -21,7 +21,7 @@
 
 @synthesize game;
 @synthesize role;
-@synthesize targetName;
+@synthesize target;
 @synthesize nightActions;
 @synthesize index;
 @synthesize isDead;

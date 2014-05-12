@@ -28,16 +28,16 @@
     
     Player *player = [self.game randomVillager];
     player.isNemesisTarget = YES;
-    self.player.targetName = player.name;
+    self.player.target = player;
     
-    message = [message stringByAppendingString:[NSString stringWithFormat:@"\n\nYour target is:\n%@", self.player.targetName]];
+    message = [message stringByAppendingString:[NSString stringWithFormat:@"\n\nYour target is:\n%@", self.player.target.name]];
     
     return message;
 }
 
 - (NSString *)tapLabel
 {
-    return [NSString stringWithFormat:@"Nemesis, your target is %@. Guess who you think the Werewolf is!", self.player.targetName];
+    return [NSString stringWithFormat:@"Nemesis, your target is %@. Guess who you think the Werewolf is!", self.player.target.name];
 }
 
 @end
