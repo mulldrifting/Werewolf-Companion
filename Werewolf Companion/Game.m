@@ -22,6 +22,7 @@
 @interface Game ()
 
 @property (strong, nonatomic) NSMutableArray *roles;
+@property (nonatomic) BOOL hasHunter, hasNemesis;
 
 @end
 
@@ -39,9 +40,9 @@
         _wolfTargets = [NSMutableArray new];
         
         _gameHistory =  @"";
+        _winningFaction = -1;
         
         _isNight = NO;
-        _isOver = NO;
         _townDidNotKill = NO;
         _didWrap = NO;
         
@@ -51,6 +52,33 @@
     }
     
     return self;
+}
+
+- (id)initWithGameSetup:(GameSetup *)gameSetup players:(NSMutableArray *)players
+{
+    if (self = [super init])
+    {
+        _gameSetup = gameSetup;
+        _numPlayers = [gameSetup numPlayers];
+        
+        _players = players;
+        _wolves = [NSMutableArray new];
+        _wolfTargets = [NSMutableArray new];
+        
+        _gameHistory =  @"";
+        _winningFaction = -1;
+        
+        _isNight = NO;
+        _townDidNotKill = NO;
+        _didWrap = NO;
+        
+        _currentRound = 0;
+        
+        [self prepareGame];
+    }
+    
+    return self;
+
 }
 
 -(BOOL)isDuplicateName:(NSString *)name
@@ -65,6 +93,17 @@
 
 #pragma mark - Game Logic Methods
 
+- (int)numberAlive:(NSInteger)roleID
+{
+    int total = 0;
+    for (Player *player in _players) {
+        if (!player.isDead && player.role.roleID == roleID) {
+            total++;
+        }
+    }
+    return total;
+}
+
 - (NSString *)checkNightResult
 {
     NSString *dayMessage = @"";
@@ -74,6 +113,8 @@
     if (_wolfTargets.count > 0) {
         Player* targetPlayer = _wolfTargets[arc4random_uniform((u_int32_t)[_wolfTargets count])];
         targetPlayer.isWolfTarget = YES;
+        self.gameHistory = [self.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Night %d: The Wolves targeted %@\n", self.currentRound, targetPlayer.name]];
+        [_wolfTargets removeAllObjects];
     }
     
     for (Player *player in _players) {
@@ -87,60 +128,141 @@
                 }
                 
                 dayMessage = [dayMessage stringByAppendingString:[NSString stringWithFormat:@"%@ was killed in the night!", player.name]];
+                self.gameHistory = [self.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Night %d: %@ died!\n", self.currentRound, player.name]];
                 firstString = NO;
                 nobodyDied = NO;
             }
         }
     }
     
-    [self checkGameState];
-    
     if (nobodyDied) {
         dayMessage = [dayMessage stringByAppendingString:@"Nobody died last night!"];
+        self.gameHistory = [self.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Night %d: Nobody Died!\n", self.currentRound]];
     }
+    
+    [self resetPlayersNightStatus];
     
     return dayMessage;
 }
 
-- (void)checkGameState
+- (BOOL)isOver
 {
-    int numWolf = 0;
+    int numWolf = [self numberAlive:kWerewolf];
     int numVillage = 0;
-    
-    for (Player *wolf in _wolves) {
-        if (!wolf.isDead) {
-            numWolf++;
-        }
-    }
+    NSMutableArray *aliveVillagers = [NSMutableArray new];
     
     for (Player *player in _players) {
         if (!player.isDead) {
             if ([player.role.seerSeesAs isEqualToString:@"Human"]) {
+                [aliveVillagers addObject:player];
                 numVillage++;
             }
         }
     }
     
-    if (numWolf >= numVillage) {
-        _isOver = YES;
-        NSLog(@"Wolves equal or outnumber Villagers: GAME OVER");
-    }
-    else if (numWolf == 0) {
-        _isOver = YES;
-        NSLog(@"Wolves are dead: GAME OVER");
-    }
-    else if (self.townDidNotKill) {
     
-        
+    
+    if (numWolf == 0) {
+        _winningFaction = kTownFaction;
+        return YES;
     }
-    else {
-        _isOver = NO;
+    
+    if (numWolf == 1 && numVillage == 1)
+    {
+        if ([aliveVillagers[0] roleID] == kHunter) {
+            _winningFaction = kTownFaction;
+        }
+        else {
+            _winningFaction = kWerewolfFaction;
+        }
+        return YES;
     }
+    
+    if (numWolf > numVillage) {
+        _winningFaction = kWerewolfFaction;
+        return YES;
+    }
+    
+    if (numWolf == numVillage) {
+        if (_hasNemesis && [self nemesisTargetAlive]) {
+            return NO;
+        }
+        _winningFaction = kWerewolfFaction;
+        return YES;
+    }
+
+    
+    return NO;
 }
 
-- (void)endGame
+- (NSString *)gameSummary
 {
+    NSString *gameSummary = @"";
     
+    NSString *wolfSummary = [self listOfWolves];
+    NSString *nemesisSummary = @"Nemesis: ";
+    NSString *villageSummary = @"The Village: ";
+    
+    BOOL isFirstTownObject = YES;
+    BOOL isFirstNemesisObject = YES;
+    
+    for (Player *player in _players) {
+        if (player.role.faction == kTownFaction) {
+            if (isFirstTownObject) {
+                villageSummary = [villageSummary stringByAppendingString:[NSString stringWithFormat:@"%@", player.name]];
+                isFirstTownObject = NO;
+            }
+            else {
+                villageSummary = [villageSummary stringByAppendingString:[NSString stringWithFormat:@", %@", player.name]];
+            }
+        }
+        if (player.role.faction == kNemesisFaction) {
+            if (isFirstNemesisObject) {
+                nemesisSummary = [nemesisSummary stringByAppendingString:[NSString stringWithFormat:@"%@", player.name]];
+                isFirstNemesisObject = NO;
+            }
+            else {
+                nemesisSummary = [nemesisSummary stringByAppendingString:[NSString stringWithFormat:@", %@", player.name]];
+            }
+        }
+    }
+    
+    switch (self.winningFaction) {
+        case kTownFaction:
+            gameSummary = villageSummary;
+            if (_wolves) {
+                gameSummary = [gameSummary stringByAppendingString:[NSString stringWithFormat:@"\n%@",wolfSummary]];
+            }
+            if (!isFirstNemesisObject) {
+                gameSummary = [gameSummary stringByAppendingString:[NSString stringWithFormat:@"\n%@",nemesisSummary]];
+            }
+            break;
+        case kWerewolfFaction:
+            gameSummary = wolfSummary;
+            if (!isFirstTownObject) {
+                gameSummary = [gameSummary stringByAppendingString:[NSString stringWithFormat:@"\n%@",villageSummary]];
+            }
+            if (!isFirstNemesisObject) {
+                gameSummary = [gameSummary stringByAppendingString:[NSString stringWithFormat:@"\n%@",nemesisSummary]];
+            }
+            break;
+        case kNemesisFaction:
+            gameSummary = nemesisSummary;
+            if (!isFirstTownObject) {
+                gameSummary = [gameSummary stringByAppendingString:[NSString stringWithFormat:@"\n%@",villageSummary]];
+            }
+            if (_wolves) {
+                gameSummary = [gameSummary stringByAppendingString:[NSString stringWithFormat:@"\n%@",wolfSummary]];
+            }
+            break;
+            
+        default:
+            break;
+    }
+    
+    gameSummary = [gameSummary stringByAppendingString:[NSString stringWithFormat:@"\n\n%@",self.gameHistory]];
+    
+    return gameSummary;
 }
 
 #pragma mark - Player Action Methods
@@ -243,8 +365,22 @@
     if (player.isDead) {
         NSLog(@"Tried to kill dead player");
     }
+    if (player.role.roleID == kNemesis) {
+        player.target.isNemesisTarget = NO;
+    }
     
     player.isDead = YES;
+}
+
+- (BOOL)nemesisTargetAlive
+{
+    BOOL nemesisTargetAlive = NO;
+    for (Player *player in _players) {
+        if (player.isNemesisTarget) {
+            nemesisTargetAlive = YES;
+        }
+    }
+    return nemesisTargetAlive;
 }
 
 #pragma mark - Setup Game Methods
@@ -252,6 +388,13 @@
 - (void)prepareGame
 {
     [self preparePlayers];
+    [self prepareRoles];
+    [self shuffleRoles];
+    [self assignRoles];
+}
+
+- (void)prepareGameWithPlayers
+{
     [self prepareRoles];
     [self shuffleRoles];
     [self assignRoles];
@@ -276,6 +419,8 @@
 {
     int keyIndex = 0;
     self.roles = [NSMutableArray new];
+    _hasHunter = NO;
+    _hasNemesis = NO;
     
     for (NSString *roleName in [LLConstants listOfDefinedRoles]) {
         
@@ -303,10 +448,12 @@
         case kVigilante:
             return [[Vigilante alloc] initWithGame:self];
         case kHunter:
+            self.hasHunter = YES;
             return [[Hunter alloc] initWithGame:self];
         case kMinion:
             return [[Minion alloc] initWithGame:self];
         case kNemesis:
+            self.hasNemesis = YES;
             return [[Nemesis alloc] initWithGame:self];
         default:
             NSLog(@"Unknown role type");

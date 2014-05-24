@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, alertViewType) {
+typedef NS_ENUM(NSInteger, AlertViewType) {
     kNameEntry,
     kReadyToSeeRole,
     kKillPlayer,
@@ -19,7 +19,8 @@ typedef NS_ENUM(NSInteger, alertViewType) {
     kNightAction,
     kSeerPeek,
     kNightActionConfirm,
-    kNightResult
+    kNightResult,
+    kRevealKilledRole
 };
 
 @class Game;

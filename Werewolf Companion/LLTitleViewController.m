@@ -32,7 +32,7 @@
     _productTourView = [[CRProductTour alloc] initWithFrame:self.view.frame];
     
     // Create popover bubble
-    CRBubble *settingsBubble = [[CRBubble alloc] initWithAttachedView:_settingsButton title:@"" description:@"Hold down three fingers to open\nthe settings at any time" arrowPosition:CRArrowPositionTop andColor:[UIColor colorWithWhite:0.298 alpha:1.000]];
+    CRBubble *settingsBubble = [[CRBubble alloc] initWithAttachedView:_settingsButton title:@"" description:@"Hold down three fingers to open\nthe settings at any time" arrowPosition:CRArrowPositionLeft andColor:[UIColor colorWithWhite:0.298 alpha:1.000]];
     NSMutableArray *bubbleArray = [[NSMutableArray alloc] initWithObjects:settingsBubble, nil];
     [_productTourView setBubbles:bubbleArray];
     
@@ -64,5 +64,10 @@
     // Set status bar color to default = black
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
+
+- (IBAction)unwindToTitleScreen:(UIStoryboardSegue *)unwindSegue
+{
+}
+
 
 @end

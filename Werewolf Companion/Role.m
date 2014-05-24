@@ -16,7 +16,7 @@
     if (self = [super init])
     {
         _game = game;
-        _faction = @"Town";
+        _faction = kTownFaction;
         _seerSeesAs = @"Human";
         _oncePerGameUsed = NO;
     }

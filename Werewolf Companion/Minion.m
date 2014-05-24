@@ -15,7 +15,7 @@
     if (self = [super initWithGame:game])
     {
         self.name = @"Minion";
-        self.faction = @"Werewolf";
+        self.faction = kWerewolfFaction;
         self.roleID = kMinion;
     }
     

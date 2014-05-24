@@ -15,7 +15,7 @@
     if (self = [super initWithGame:game])
     {
         self.name = @"Werewolf";
-        self.faction = @"Werewolf";
+        self.faction = kWerewolfFaction;
         self.seerSeesAs = @"Werewolf";
         self.roleID = kWerewolf;
     }
@@ -39,7 +39,10 @@
 
 - (NSString *)verifyNightAction
 {
-    return @"If Werewolves do not agree on the kill, a target will be chosen at random from among the picks.";
+    if ([self.game.wolves count] > 1) {
+        return @"If Werewolves do not agree on the kill, a target will be chosen at random from among the picks.";
+    }
+    return @"";
 }
 
 - (void)performNightActionWithSelectedPlayer:(Player *)player

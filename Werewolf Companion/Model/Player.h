@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) Game *game;
 @property (strong, nonatomic) Role *role;
+@property (copy, nonatomic) NSString *tempName;
 @property (nonatomic) NSInteger index;
 
 @property (strong, nonatomic) NSMutableArray *nightActions;

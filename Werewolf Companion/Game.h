@@ -19,16 +19,18 @@
 @property (strong, nonatomic) NSMutableArray *players;
 @property (strong, nonatomic) NSMutableArray *wolves;
 @property (strong, nonatomic) NSMutableArray *wolfTargets;
+
 @property (strong, nonatomic) NSString *gameHistory;
+@property (nonatomic) FactionType winningFaction;
 
 @property (nonatomic) NSInteger numPlayers;
 @property (nonatomic) NSInteger currentRound;
 @property (nonatomic) BOOL isNight;
-@property (nonatomic) BOOL isOver;
 @property (nonatomic) BOOL townDidNotKill;
 @property (nonatomic) BOOL didWrap;
 
 - (id)initWithGameSetup:(GameSetup *)gameSetup;
+- (id)initWithGameSetup:(GameSetup *)gameSetup players:(NSMutableArray *)players;
 
 - (BOOL)isDuplicateName:(NSString*)name;
 - (Player*)nextAlivePlayer:(int)index;
@@ -37,9 +39,10 @@
 - (Player*)randomVillager;
 
 - (void)killPlayerAtIndex:(int)index;
-- (void)checkGameState;
+- (BOOL)isOver;
 - (NSString *)checkNightResult;
 - (NSString *)listOfWolves;
 - (void)resetPlayersNightStatus;
+- (NSString *)gameSummary;
 
 @end

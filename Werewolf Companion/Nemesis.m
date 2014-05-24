@@ -15,7 +15,7 @@
     if (self = [super initWithGame:game])
     {
         self.name = @"Nemesis";
-        self.faction = @"Nemesis";
+        self.faction = kNemesisFaction;
         self.roleID = kNemesis;
     }
     

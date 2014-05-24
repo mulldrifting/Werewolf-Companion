@@ -30,6 +30,7 @@
     if (doesSeerPeek) {
         message = [message stringByAppendingString:[NSString stringWithFormat:@"\n\nYou peek, and %@ looks like a %@", randomPlayer.name, randomPlayer.role.seerSeesAs]];
         [self.player.nightActions addObject:randomPlayer];
+        self.game.gameHistory = [self.game.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Night %d: The Seer peeked %@ and saw a %@\n", self.game.currentRound, randomPlayer.name, randomPlayer.role.seerSeesAs]];
     }
     
     return message;

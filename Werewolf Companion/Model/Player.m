@@ -21,6 +21,7 @@
 
 @synthesize game;
 @synthesize role;
+@synthesize tempName;
 @synthesize target;
 @synthesize nightActions;
 @synthesize index;
@@ -28,6 +29,7 @@
 @synthesize isPriestTarget;
 @synthesize isWolfTarget;
 @synthesize isVigilanteTarget;
+@synthesize isNemesisTarget;
 
 - (void)initializeNewPlayerWithGame:(Game *)theGame atIndex:(NSInteger)theIndex
 {
@@ -38,6 +40,7 @@
     self.isPriestTarget = NO;
     self.isWolfTarget = NO;
     self.isVigilanteTarget = NO;
+    self.isNemesisTarget = NO;
     
     self.name = [NSString stringWithFormat:@"Player %d", self.index];
 }

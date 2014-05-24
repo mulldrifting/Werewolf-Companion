@@ -10,7 +10,7 @@
 
 static const int MAX_NUM_PEOPLE = 99;
 
-typedef NS_ENUM(NSInteger, roleType)
+typedef NS_ENUM(NSInteger, RoleType)
 {
     kVillager,
     kWerewolf,
@@ -22,6 +22,12 @@ typedef NS_ENUM(NSInteger, roleType)
     kNemesis
 };
 
+typedef NS_ENUM (NSInteger, FactionType)
+{
+    kTownFaction,
+    kWerewolfFaction,
+    kNemesisFaction
+};
 
 @interface LLConstants : NSObject
 

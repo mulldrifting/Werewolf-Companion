@@ -18,7 +18,7 @@
 #import "Player.h"
 #import "Role.h"
 
-typedef NS_ENUM(NSInteger, popupViewType) {
+typedef NS_ENUM(NSInteger, PopupViewType) {
     kPassRight,
     kBeginDay,
     kPassToPlayer,
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, popupViewType) {
     kWolvesDecideKill
 };
 
-typedef NS_ENUM(NSInteger, cornerButtonType)
+typedef NS_ENUM(NSInteger, CornerButtonType)
 {
     kReadyToStart,
     kNoKillToday,
@@ -64,6 +64,8 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
     [super viewDidLoad];
     
     NSLog(@"Game View did Load");
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     [self setupGameControllers];
     [self setupBoxView];
@@ -297,7 +299,10 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
 
 - (void)scrollToNextPlayer
 {
-    int nextIndex = [[_game nextAlivePlayer:_carousel.currentItemIndex] index];
+    int nextIndex = _carousel.currentItemIndex + 1;
+    if (nextIndex == self.game.players.count) {
+        nextIndex = 0;
+    }
     [_carousel scrollToItemAtIndex:nextIndex animated:YES];
 }
 
@@ -511,7 +516,9 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
 
                     
                 } else if (buttonIndex == alertView.cancelButtonIndex) {
-
+                    if (weakSelf.game.isNight) {
+                        [weakSelf createAlertViewOfType:kReadyToSeeRole];
+                    }
                 }
             };
             
@@ -578,18 +585,35 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
             alertView.tag = kKillPlayer;
             
             alertView.tapBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
-                [weakSelf.game killPlayerAtIndex:selectedPlayer.index];
-                [weakSelf.game checkGameState];
-                if (weakSelf.game.isOver) {
-                    weakSelf.endGameViewController = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"endGame"];
-                    weakSelf.endGameViewController.game = weakSelf.game;
-                    [weakSelf showEndGameViewController];
+                
+                if (buttonIndex == 1) {
+                    
+                    [weakSelf.game killPlayerAtIndex:selectedPlayer.index];
+                    self.game.gameHistory = [self.game.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Day %d: The Town killed %@\n", self.game.currentRound, selectedPlayer.name]];
+                    
+                    if (selectedPlayer.isNemesisTarget) {
+                        weakSelf.game.winningFaction = kNemesisFaction;
+                        weakSelf.endGameViewController = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"endGame"];
+                        weakSelf.endGameViewController.game = weakSelf.game;
+                        [weakSelf showEndGameViewController];
+                        
+                    }
+                    else if (weakSelf.game.isOver) {
+                        
+                        weakSelf.endGameViewController = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"endGame"];
+                        weakSelf.endGameViewController.game = weakSelf.game;
+                        [weakSelf showEndGameViewController];
+                    }
+                    else {
+                        [weakSelf createAlertViewOfType:kRevealKilledRole];
+                    }
                 }
+                
                 else {
-                    [weakSelf beginNight];
-                    [weakSelf.carousel reloadData];
-
+                    weakSelf.game.gameHistory = [weakSelf.game.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Day %d: The Town did not kill anyone\n", weakSelf.game.currentRound]];
                 }
+                
+                
             };
             
             [alertView show];
@@ -611,7 +635,6 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
             alertView.tapBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
                 if (buttonIndex == 1) {
                     weakSelf.game.townDidNotKill = YES;
-                    [weakSelf.game checkGameState];
                     if (weakSelf.game.isOver) {
                         weakSelf.endGameViewController = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"endGame"];
                         weakSelf.endGameViewController.game = weakSelf.game;
@@ -625,6 +648,28 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
             };
             
             [alertView show];
+            
+            break;
+        }
+            
+        {case kRevealKilledRole:
+         
+            alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"The Town Killed %@!", selectedPlayer.name]
+                                                   message:[NSString stringWithFormat:@"Their role was: %@", selectedPlayer.role.name]
+                                                  delegate:self
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+            alertView.tag = kRevealKilledRole;
+            
+            alertView.tapBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
+                if (buttonIndex == 0) {
+                    [weakSelf beginNight];
+                    [weakSelf.carousel reloadData];
+                }
+            };
+            
+            [alertView show];
+
             
             break;
         }
@@ -694,6 +739,7 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
                                                   delegate:self
                                          cancelButtonTitle:@"OK"
                                          otherButtonTitles:nil];
+            self.game.gameHistory = [self.game.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Night %d: The Seer peeked %@ and saw a %@\n", self.game.currentRound, selectedPlayer.name, selectedPlayer.role.seerSeesAs]];
             alertView.tag = kSeerPeek;
             
             alertView.tapBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
@@ -738,6 +784,12 @@ typedef NS_ENUM(NSInteger, cornerButtonType)
     }
 }
 
+- (IBAction)unwindToNewGame:(UIStoryboardSegue *)unwindSegue
+{
+    LLEndGameViewController *endGameController = unwindSegue.sourceViewController;
+    
+    
+}
 
 
 

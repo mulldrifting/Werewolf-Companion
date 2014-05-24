@@ -77,12 +77,11 @@
 }
 
 - (IBAction)subtractMinute:(id)sender {
-    unsigned long long newTime = _counterLabel.currentValue - 60000;
-    if (newTime <= 0) {
+    if (_counterLabel.currentValue <= 60000) {
         [_counterLabel setStartValue:0];
     }
     else {
-        [_counterLabel setStartValue:newTime];
+        [_counterLabel setStartValue:_counterLabel.currentValue - 60000];
     }
 }
 

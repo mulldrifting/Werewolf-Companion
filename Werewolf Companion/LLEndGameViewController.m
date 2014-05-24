@@ -7,10 +7,12 @@
 //
 
 #import "LLEndGameViewController.h"
+#import "Game.h"
 
 @interface LLEndGameViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *gameOverLabel;
+@property (weak, nonatomic) IBOutlet UILabel *gameSummaryLabel;
 
 
 
@@ -24,24 +26,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if (self.game.winningFaction == kWerewolfFaction) {
+        self.gameOverLabel.text = @"Wolves Win!";
+    }
+    else if (self.game.winningFaction == kTownFaction) {
+        self.gameOverLabel.text = @"Town Wins!";
+    }
+    else if (self.game.winningFaction == kNemesisFaction)
+    {
+        self.gameOverLabel.text = @"Nemesis Wins!";
+    }
+    
+    self.gameSummaryLabel.numberOfLines = 0;
+    [self.gameSummaryLabel sizeToFit];
+    
+    self.gameSummaryLabel.text = [self.game gameSummary];
+
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)replayButtonPressed:(id)sender {
+    
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

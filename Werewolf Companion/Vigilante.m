@@ -35,6 +35,7 @@
 {
     [super performNightActionWithSelectedPlayer:player];
     player.isVigilanteTarget = YES;
+    self.game.gameHistory = [self.game.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Night %d: The Vigilante targeted %@\n", self.game.currentRound, player.name]];
 }
 
 @end

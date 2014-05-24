@@ -35,6 +35,7 @@
 {
     [super performNightActionWithSelectedPlayer:player];
     player.isPriestTarget = YES;
+    self.game.gameHistory = [self.game.gameHistory stringByAppendingString:[NSString stringWithFormat:@"Night %d: The Priest targeted %@\n", self.game.currentRound, player.name]];
 }
 
 @end

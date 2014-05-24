@@ -16,10 +16,11 @@
 @property (weak, nonatomic) Game *game;
 @property (weak, nonatomic) Player *player;
 @property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSString *faction;
 @property (copy, nonatomic) NSString *seerSeesAs;
-@property (nonatomic) NSInteger roleID;
+@property (nonatomic) RoleType roleID;
+@property (nonatomic) FactionType faction;
 @property (nonatomic) BOOL oncePerGameUsed;
+
 
 -(id)initWithGame:(Game*)game;
 -(NSString *)getNightZeroInfo;
