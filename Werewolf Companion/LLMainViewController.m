@@ -21,9 +21,10 @@
     
     [self setupSettingsGesture];
     
-    LLTitleViewController *titleViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"title"];
+//    LLTitleViewController *titleViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"title"];
     //    [self presentViewController:titleViewController animated:NO completion:nil];
-    UINavigationController *titleNav = [[UINavigationController alloc] initWithRootViewController:titleViewController];
+//    UINavigationController *titleNav = [[UINavigationController alloc] initWithRootViewController:titleViewController];
+    UINavigationController *titleNav = [self.storyboard instantiateViewControllerWithIdentifier:@"titleNav"];
     
     [self addChildViewController:titleNav];
     [self.view addSubview:titleNav.view];

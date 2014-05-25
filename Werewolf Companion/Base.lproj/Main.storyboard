@@ -663,7 +663,7 @@ Cg
         <!--Navigation Controller-->
         <scene sceneID="Sa9-Mf-V99">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mbA-5D-SPs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="titleNav" automaticallyAdjustsScrollViewInsets="NO" id="mbA-5D-SPs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wZV-X8-aOu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
