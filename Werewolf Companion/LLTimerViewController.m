@@ -53,6 +53,13 @@
     
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [_counterLabel stop];
+}
+
 - (void)setupCounter
 {
     _counterLabel.countDirection = kCountDirectionDown;
@@ -67,6 +74,9 @@
         [_counterLabel stop];
     }
     else {
+        if (_counterLabel.currentValue <= 0) {
+            return;
+        }
         [_counterLabel start];
     }
 }

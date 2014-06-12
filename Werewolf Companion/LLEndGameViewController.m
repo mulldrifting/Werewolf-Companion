@@ -40,6 +40,8 @@
     self.gameSummaryLabel.numberOfLines = 0;
     [self.gameSummaryLabel sizeToFit];
     
+
+    
     self.gameSummaryLabel.text = [self.game gameSummary];
 
     
